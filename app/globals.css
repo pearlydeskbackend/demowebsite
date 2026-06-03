@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dl-base: #0D1914;
+    --dl-deep: #09110E;
+    --dl-surface: #111D17;
+    --dl-white: #FFFFFF;
+    --dl-sage: #A3B899;
+    --dl-mint: #E6F0DC;
+    --dl-grid: rgba(255,255,255,0.06);
+    --dl-grid-hover: rgba(255,255,255,0.14);
+    --ease-magnetic: cubic-bezier(0.16,1,0.3,1);
+    --ease-stagger: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  html {
+    background: var(--dl-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--dl-base);
+    color: var(--dl-white);
+    font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: rgba(163,184,153,0.22); color: #fff; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  button { font-family: inherit; cursor: pointer; }
+  a { text-decoration: none; color: inherit; }
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  width: 10px; height: 10px;
+  background: var(--dl-mint);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: width 0.3s var(--ease-magnetic), height 0.3s var(--ease-magnetic), background 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: normal;
+}
+.cursor-follower {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(230,240,220,0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%,-50%);
+}
+.cursor.hovering { width: 48px; height: 48px; background: transparent; border: 1.5px solid var(--dl-mint); }
+
+
+/* Clip-path reveal base */
+.clip-reveal { clip-path: inset(100% 0 0 0); }
+.clip-reveal.revealed { clip-path: inset(0% 0 0 0); }
+
+/* Grid line */
+.grid-line { width: 100%; height: 1px; background: var(--dl-grid); }
+
+/* Watermark */
+.section-watermark {
+  position: absolute;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(6rem,14vw,16rem);
+  font-weight: 700;
+  color: rgba(255,255,255,0.02);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Pill buttons */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: var(--dl-mint); color: var(--dl-base);
+  font-family: 'Satoshi','Inter',sans-serif; font-size: 0.9rem; font-weight: 500;
+  padding: 0.95rem 2.25rem; border: 1px solid var(--dl-mint); border-radius: 999px;
+  transition: background 0.4s var(--ease-magnetic), color 0.4s var(--ease-magnetic), transform 0.4s var(--ease-magnetic);
+  white-space: nowrap; position: relative; overflow: hidden;
+}
+.btn-primary:hover { background: transparent; color: var(--dl-mint); transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: transparent; color: var(--dl-sage);
+  font-size: 0.9rem; font-weight: 500;
+  padding: 0.95rem 2.25rem; border: 1px solid var(--dl-grid-hover); border-radius: 999px;
+  transition: border-color 0.4s var(--ease-magnetic), color 0.4s var(--ease-magnetic), transform 0.4s var(--ease-magnetic);
+  white-space: nowrap;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.28); color: var(--dl-white); transform: translateY(-1px); }
+
+/* Magnetic button */
+.magnetic { display: inline-block; }
+
+/* Booking drawer — dark select options */
+.booking-select option { background: var(--dl-deep); color: var(--dl-white); }
+
+/* Spinner used in booking drawer loading / submitting states */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Text styles */
+.text-label {
+  font-family: 'Satoshi','Inter',sans-serif;
+  font-size: clamp(0.65rem,0.9vw,0.75rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--dl-sage);
+}
+
+/* Accordion grid */
+.accordion-grid { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.65s var(--ease-stagger); }
+.accordion-grid.open { grid-template-rows: 1fr; }
+.accordion-inner { overflow: hidden; }
+
+/* Nav link underline */
+.nav-link-active::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: -1px;
+  height: 1.5px; background: var(--dl-mint);
+}
+
+/* Scroll indicator */
+@keyframes scrollBounce {
+  0%,100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+  50% { transform: translateX(-50%) translateY(8px); opacity: 0.9; }
+}
+.scroll-indicator-anim { animation: scrollBounce 2.8s ease-in-out infinite; }
+
+/* Video play button */
+.play-btn {
+  transition: transform 0.35s var(--ease-magnetic), background 0.35s ease;
+}
+[role="button"]:hover .play-btn {
+  transform: scale(1.12);
+  background: rgba(255,255,255,0.30) !important;
+}
+
+/* Pin ripple */
+@keyframes pinPulse {
+  0% { transform: translateX(-50%) scale(0.6); opacity: 0.6; }
+  100% { transform: translateX(-50%) scale(1.8); opacity: 0; }
+}
+.pin-ripple-anim { animation: pinPulse 2.6s ease-out infinite; }
+
+/* Skeleton shimmer */
+@keyframes skeletonPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.65; } }
+.skeleton-pulse { animation: skeletonPulse 3.5s ease-in-out infinite; }
+
+/* Team card rise */
+@keyframes tmRise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+/* Modal */
+@keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalPop { from { opacity: 0; transform: translateY(18px) scale(0.98); } to { opacity: 1; transform: none; } }
+
+/* Number split */
+.split-char { display: inline-block; }

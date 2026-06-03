@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "about": "About us",
+    "services": "Services",
+    "office": "Our Office",
+    "team": "Team",
+    "faq": "FAQ",
+    "contacts": "Contacts",
+    "cta": "Make an appointment",
+    "callMobile": "Make an appointment"
+  },
+  "hero": {
+    "tag1": "Vancouver, BC",
+    "tag2": "Est. 2004",
+    "line1": "Dentistry",
+    "line2": "that",
+    "line3": "makes you",
+    "line4": "smile.",
+    "sub": "A full-service family and cosmetic dental studio in the heart of Vancouver. Comfortable, modern, and always welcoming new patients.",
+    "cta": "Make an appointment",
+    "call": "Call 604 879 9999"
+  },
+  "about": {
+    "label": "About Kingsgate",
+    "heading1": "We change the",
+    "heading2": "dental experience.",
+    "sub": "Owned and operated by Drs. Do & Largani, Kingsgate Dental has served Vancouver families from our Broadway location for over two decades.",
+    "bentoLabel": "The Kingsgate Experience",
+    "bentoHeading1": "Your comfort is",
+    "bentoHeading2": "our priority.",
+    "established": "Est. 2004",
+    "yearsBody": "Years serving Vancouver families with compassionate, expert dental care.",
+    "address": "370 East Broadway, Vancouver BC",
+    "features": [
+      { "title": "Movie Experience", "body": "Individual TVs at every chair and Skyfactory ceiling panels transform your appointment into a relaxing escape.", "tag": "Comfort" },
+      { "title": "Emergency Care", "body": "Dental emergencies don't keep office hours. Dr. Do and our team are available for urgent same-day relief.", "tag": "Urgent" },
+      { "title": "Invisalign Certified", "body": "Custom clear aligners. No metal brackets — just a confident smile, on your schedule.", "tag": "Cosmetic" },
+      { "title": "UBC Faculty Trained", "body": "Our dentists have served as clinical instructors at UBC's Faculty of Dentistry.", "tag": "Expertise" },
+      { "title": "Mon – Sat Hours", "body": "Open six days a week, 9:30am to 5:30pm. We accommodate families and walk-ins.", "tag": "Accessible" },
+      { "title": "Free Parking", "body": "Located on the lower level of Kingsgate Mall. Free parking directly outside our clinic.", "tag": "Convenient" }
+    ]
+  },
+  "services": {
+    "label": "What We Offer",
+    "heading1": "Complete dental care,",
+    "heading2": "all in one place.",
+    "sub": "From routine cleanings to complex restorations, our team covers every aspect of your oral health under one roof.",
+    "cta": "Make an appointment",
+    "disclaimer": "New patients welcome · Walk-ins accepted",
+    "includes": "Includes",
+    "list": [
+      { "index": "01", "title": "General Dentistry", "category": "Foundation", "description": "Comprehensive oral health care for the entire family. Regular cleanings remove plaque and tartar buildup, preventing decay and gum disease. Our hygienists deliver a level of clean that home brushing simply cannot match.", "includes": ["Teeth Cleaning & Polishing", "Fillings & Restorations", "Oral Health Examinations", "X-Rays & Diagnostics"] },
+      { "index": "02", "title": "Invisalign Correction", "category": "Orthodontics", "description": "Straighten your teeth without metal brackets using a series of custom-fit clear aligners. Removable for eating and cleaning, Invisalign delivers the same results as traditional braces — discreetly, on your schedule.", "includes": ["Custom Clear Aligner Trays", "Digital Treatment Planning", "Progress Monitoring", "Retainer Fitting"] },
+      { "index": "03", "title": "Cosmetic Makeovers", "category": "Aesthetics", "description": "Transform your smile with professional whitening, bonding, and cosmetic procedures designed to enhance your natural beauty. We focus on results that look and feel completely natural.", "includes": ["Professional Teeth Whitening", "Composite Bonding", "Smile Design Consultation", "Cosmetic Contouring"] },
+      { "index": "04", "title": "Crowns & Bridges", "category": "Restoration", "description": "Restore damaged or missing teeth with precision-crafted crowns and bridges. Each restoration is laboratory-fabricated to match your natural tooth colour and bite, cemented permanently for lasting function.", "includes": ["Porcelain Crowns", "Fixed Dental Bridges", "Crown Lengthening", "Temporary Restorations"] },
+      { "index": "05", "title": "Dental Implants", "category": "Implantology", "description": "The gold standard for replacing missing teeth. A titanium implant anchors a prosthetic tooth permanently to your jawbone, looking and functioning exactly like a natural tooth while preserving bone density.", "includes": ["Titanium Implant Placement", "Custom Prosthetic Crown", "Bone Preservation", "Full Implant Consultation"] },
+      { "index": "06", "title": "Emergency Dentistry", "category": "Urgent Care", "description": "Dental emergencies require immediate attention. Our team handles urgent root canals, extractions, cracked teeth, and severe pain — providing same-day relief when you need it most.", "includes": ["Emergency Root Canals", "Urgent Extractions", "Cracked Tooth Repair", "Pain Management"] },
+      { "index": "07", "title": "Root Canal Therapy", "category": "Endodontics", "description": "When decay reaches the pulp of a tooth, root canal therapy eliminates the infection and saves the tooth. Modern techniques make this procedure comfortable and often completed in a single visit.", "includes": ["Pulp Chamber Cleaning", "Canal Shaping & Sealing", "Post-Treatment Crown", "Infection Management"] },
+      { "index": "08", "title": "Pediatric Dentistry", "category": "Family", "description": "Dr. Do's gentle, friendly approach makes him a natural with children. We create positive dental experiences from an early age, building healthy habits that last a lifetime.", "includes": ["Children's Cleanings", "Fluoride Treatments", "Sealants", "Early Orthodontic Assessment"] }
+    ]
+  },
+  "showcase": {
+    "label": "Our Services",
+    "heading1": "Scroll to explore",
+    "heading2": "what we do.",
+    "drag": "Drag to scroll",
+    "bookService": "Book this service",
+    "items": [
+      { "label": "01 / General Dentistry", "title": "Clean, healthy foundations", "description": "Regular cleanings and preventive care that keep your smile bright and your gums healthy for life.", "tag": "Prevention" },
+      { "label": "02 / Invisalign", "title": "Straight teeth, invisibly", "description": "Custom clear aligners that gradually perfect your smile — no metal, no discomfort, no compromise.", "tag": "Orthodontics" },
+      { "label": "03 / Cosmetic", "title": "Your best smile, crafted", "description": "Professional whitening, bonding, and cosmetic contouring designed to enhance your natural beauty.", "tag": "Aesthetics" },
+      { "label": "04 / Implants", "title": "Permanent. Natural. Yours.", "description": "Titanium implants that anchor a prosthetic tooth permanently — indistinguishable from the real thing.", "tag": "Restoration" },
+      { "label": "05 / Emergency", "title": "Relief when you need it", "description": "Same-day emergency appointments for urgent pain, broken teeth, and acute dental needs.", "tag": "Urgent Care" }
+    ]
+  },
+  "office": {
+    "label": "Our Office",
+    "heading1": "The arrival",
+    "heading2": "experience.",
+    "sub": "We've designed every detail of our clinic to make your visit as comfortable and stress-free as possible. From the moment you walk in, you're in good hands.",
+    "directions": "Get Directions",
+    "callUs": "Call Us",
+    "amenities": [
+      { "title": "Individual TVs", "body": "Every treatment chair has a dedicated flat-screen TV. Choose your show and let time pass effortlessly." },
+      { "title": "Skyfactory Ceilings", "body": "Our Skyfactory ceiling panels display serene nature imagery, turning your appointment into a moment of calm." },
+      { "title": "Modern Equipment", "body": "Renovated in 2010, our clinic features the latest dental chairs and technology for precise, comfortable care." }
+    ],
+    "locationLabel": "Location",
+    "locationVal": "Lower Level, Kingsgate Mall\n370 East Broadway, Vancouver BC",
+    "hoursLabel": "Hours",
+    "hoursVal": "Mon – Sat: 9:30am – 5:30pm\nSunday: Closed",
+    "parkingLabel": "Parking",
+    "parkingVal": "Free parking available\ndirectly outside our clinic",
+    "phoneLabel": "Phone"
+  },
+  "team": {
+    "label": "Our Team",
+    "heading1": "There's a team",
+    "heading2": "behind",
+    "heading3": "every smile",
+    "intro1": "We believe a smile is not just aesthetics. It is your strength, confidence and warmth — and our task is to make the path to that smile as comfortable, transparent and reassuring as possible.",
+    "intro2": "The Kingsgate team of professionals delivers top-tier care through coordinated teamwork, modern technology, and genuine artistry in the craft of dentistry.",
+    "cosmeticTag": "Cosmetic & Family Dentistry",
+    "tabDental": "Dental Team",
+    "tabAdmin": "Administrative Team",
+    "philosophy": "Our Philosophy",
+    "quote": "\"Our goal is to create and maintain happy and healthy smiles for kids, teens, adults, and seniors — in a comfortable setting that feels like home.\"",
+    "quoteAttrib": "— Drs. Do & Largani, Kingsgate Dental",
+    "dental": [
+      { "name": "Dr. Tam Do", "role": "Principal Dentist", "specialty": "General & Family Dentistry", "highlight": "UBC Faculty Trained", "credentials": ["DMD — UBC Faculty of Dentistry, 2004", "BSc Biochemistry — UBC (Entrance Scholarship)", "99th Percentile — Dental Aptitude Exam", "Oral Medicine & Oral Pathology Award"], "bio": "Dr. Do spent his formative years across Northern Canada before calling Vancouver home for the past 14 years with his wife and three children. His gentle, outwardly friendly nature translates directly into his practice — creating an environment where patients of all ages feel genuinely at ease. Beyond general and family dentistry, Dr. Do is passionate about cosmetic procedures, Invisalign, and pediatric care." },
+      { "name": "Dr. Largani", "role": "Principal Dentist", "specialty": "Orthodontics & Clinical Excellence", "highlight": "Dean's List Graduate", "credentials": ["DMD — University of British Columbia, 2009", "Dean's List Graduate", "Award for Best Clinical Practice", "Award for Best Orthodontics"], "bio": "Dr. Largani brings a dual academic pedigree — graduating from Shahid Beheshti University in Tehran before earning his DMD at UBC, where he placed on the Dean's List and received awards for both clinical practice and orthodontics. His philosophy centres on providing the highest quality of care through continuous learning and active participation in study clubs." },
+      { "name": "Sarah Whitfield", "role": "Registered Dental Hygienist", "specialty": "Preventive & Periodontal Care", "highlight": "10+ Years at Kingsgate", "credentials": ["Dip. Dental Hygiene — Vancouver College", "Certified in Local Anaesthesia", "Periodontal Therapy Specialist"], "bio": "Sarah has cared for Kingsgate families for over a decade, and is known for her unhurried, gentle touch. She believes prevention is the foundation of lifelong oral health, and takes the time to coach every patient through a routine that actually fits their life." },
+      { "name": "Daniel Cho", "role": "Registered Dental Hygienist", "specialty": "Hygiene & Patient Comfort", "highlight": "Anxiety-Friendly Care", "credentials": ["Dip. Dental Hygiene — Camosun College", "Certified in Nitrous Oxide Sedation", "Anxiety-Friendly Care Trained"], "bio": "Daniel specialises in making nervous patients feel safe. With a calm, methodical approach and a knack for explaining exactly what's happening, he has helped many anxious first-timers become comfortable regulars." }
+    ],
+    "admin": [
+      { "name": "Maria Alvarez", "role": "Office Manager", "specialty": "Practice Operations", "highlight": "Patient Experience Lead", "credentials": ["15 Years in Dental Administration", "Insurance & Billing Specialist", "Patient Experience Lead"], "bio": "Maria keeps Kingsgate running smoothly behind the scenes — from scheduling and insurance to making sure every patient feels welcomed the moment they walk in. If you have a question about your visit, she's the one with the answer." },
+      { "name": "Priya Nair", "role": "Treatment Coordinator", "specialty": "Care Planning & Financing", "highlight": "No-Surprises Planning", "credentials": ["Certified Dental Assistant", "Treatment Planning Specialist", "Financing & Benefits Advisor"], "bio": "Priya translates clinical treatment plans into clear, jargon-free steps and helps patients understand their coverage and financing options. Her goal is simple: no surprises, just a path forward you feel good about." },
+      { "name": "Emily Tran", "role": "Front Desk Coordinator", "specialty": "Reception & Scheduling", "highlight": "Your First Hello", "credentials": ["Front Office Administration", "Multilingual — EN / FR / VI", "New Patient Onboarding"], "bio": "Emily is the friendly first voice you'll hear when you call Kingsgate. She handles bookings, reminders, and new-patient paperwork with warmth and precision, so your visit starts on the right foot." }
+    ]
+  },
+  "faq": {
+    "label": "Questions & Answers",
+    "heading1": "Before you visit,",
+    "heading2": "you might want to know.",
+    "sub": "Can't find what you're looking for? Call us at (604) 879-9999 or send a message below.",
+    "call": "Call 604 879 9999",
+    "sendMessage": "Send a Message",
+    "categories": [
+      { "id": "new-patients", "label": "New Patients", "faqs": [
+        { "index": "01", "q": "Are you accepting new patients?", "a": "Yes — we warmly welcome new patients of all ages. Simply call us at (604) 879-9999 or use the contact form below to book your first appointment. We'll take care of the rest." },
+        { "index": "02", "q": "What should I bring to my first appointment?", "a": "Please bring a valid photo ID, your dental insurance card (if applicable), and a list of any medications you're currently taking. Arriving 10 minutes early allows us to complete your intake paperwork comfortably." },
+        { "index": "03", "q": "Do you see children?", "a": "Absolutely. Dr. Do has a natural gift with young patients and takes extra care to make their first dental experiences positive and stress-free. We recommend bringing children in for their first visit around age 2–3." },
+        { "index": "04", "q": "Do you offer emergency appointments?", "a": "Yes. We reserve time in our daily schedule for dental emergencies. If you're experiencing severe pain, a broken tooth, or a lost filling, call us immediately at (604) 879-9999 and we'll see you as soon as possible." }
+      ]},
+      { "id": "services", "label": "Services", "faqs": [
+        { "index": "01", "q": "What dental services do you offer?", "a": "We provide a comprehensive range of services including teeth cleanings, fillings, whitening, Invisalign, crowns, bridges, dental implants, root canals, extractions, and pediatric dentistry — all under one roof." },
+        { "index": "02", "q": "How long does Invisalign treatment take?", "a": "Treatment duration varies depending on the complexity of your case. Most patients complete their Invisalign journey in 6–18 months. During your consultation, Dr. Do will provide a personalised treatment timeline." },
+        { "index": "03", "q": "How long does professional whitening take?", "a": "Professional in-office whitening typically takes one to two hours and can lighten teeth by several shades in a single session. We also offer custom take-home trays for a more gradual approach." }
+      ]},
+      { "id": "comfort", "label": "Comfort & Safety", "faqs": [
+        { "index": "01", "q": "I have dental anxiety. How do you help?", "a": "We understand that dental anxiety is real and common. Our clinic is designed to be calming — with Skyfactory ceiling imagery, individual TVs, and a team that moves at your pace. Please let us know about your concerns when booking so we can prepare accordingly." },
+        { "index": "02", "q": "Is dental treatment painful?", "a": "Modern dentistry has come a long way. We use effective local anaesthesia for all procedures that require it, and our team is trained to minimize discomfort at every step. Most patients are pleasantly surprised by how comfortable their experience is." }
+      ]},
+      { "id": "location", "label": "Location & Hours", "faqs": [
+        { "index": "01", "q": "Where are you located?", "a": "We are located at 370 East Broadway, Suite 112, on the lower level of Kingsgate Mall — at the intersection of East Broadway and Kingsway in the Mt. Pleasant neighbourhood of Vancouver." },
+        { "index": "02", "q": "Is parking available?", "a": "Yes, free parking is available directly outside the clinic in the Kingsgate Mall parking lot. We are also accessible by public transit via the 99 B-Line and multiple bus routes along Broadway." },
+        { "index": "03", "q": "What are your hours?", "a": "We are open Monday through Saturday, 9:30am to 5:30pm. We are closed on Sundays and statutory holidays. We recommend calling ahead to confirm availability, especially for same-day appointments." }
+      ]}
+    ]
+  },
+  "contact": {
+    "label": "Find Us",
+    "heading1": "We are right",
+    "heading2": "here.",
+    "openInMaps": "Open in Maps",
+    "aside": "Conveniently located to make your appointment even easier — with step-free access for patients with mobility needs.",
+    "addressLabel": "Address",
+    "addressVal": "370 East Broadway, Lower Level\nKingsgate Mall, Vancouver BC V5T 1X4",
+    "parking": "Free parking is available directly outside our clinic in the Kingsgate Mall lot, with easy transit access along Broadway.",
+    "directions": "Get Directions",
+    "storefront": "Kingsgate Mall · East Broadway"
+  },
+  "footer": {
+    "tagline": "A full-service family and cosmetic dental studio in the heart of Vancouver, BC.",
+    "hours": "Mon – Sat: 9:30am – 5:30pm",
+    "servicesLabel": "Services",
+    "clinicLabel": "Clinic",
+    "newPatientsLabel": "New Patients",
+    "newPatientsHeading": "Ready to book your first appointment?",
+    "cta": "Make an appointment",
+    "emergencyLabel": "Emergency?",
+    "emergencyText": "Call (604) 879-9999 for same-day relief",
+    "copyright": "© {year} Kingsgate Dental. All rights reserved.",
+    "footerAddress": "370 East Broadway, Vancouver BC · (604) 879-9999",
+    "services": ["General Dentistry", "Invisalign", "Cosmetic Dentistry", "Dental Implants", "Emergency Care", "Root Canal Therapy", "Pediatric Dentistry"],
+    "clinic": [["About Us", "#about"], ["Our Team", "#team"], ["Our Office", "#office"], ["FAQ", "#faq"], ["New Patients", "#contact"], ["Contact", "#contact"]]
+  },
+  "gallery": {
+    "label": "Real Results",
+    "heading1": "Our patients' smiles",
+    "heading2": "speak for themselves.",
+    "sub": "A glimpse of the work our team is proud of — from subtle refinements to full smile transformations. Every result is a real patient who trusted us with their care.",
+    "cta": "Start your smile journey",
+    "consent": "Before & after photos shared with patient consent"
+  },
+  "booking": {
+    "heading": "Book your appointment.",
+    "step": "Step {step} of 2",
+    "serviceLabel": "Service",
+    "servicePlaceholder": "Select a service…",
+    "dateLabel": "Date",
+    "timesLabel": "Available Times",
+    "idleSlots": "Select a service and date first…",
+    "checking": "Checking availability…",
+    "noTimes": "No times available that day — please try another date.",
+    "selected": "Selected:",
+    "continue": "Continue",
+    "back": "Back",
+    "nameLabel": "Full Name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "phoneOptional": "(optional)",
+    "newPatient": "I'm a new patient",
+    "notesLabel": "Notes",
+    "notesPlaceholder": "Anything we should know before your visit?",
+    "consent": "I consent to Kingsgate Dental contacting me to confirm this appointment.",
+    "confirm": "Confirm · {time}",
+    "confirming": "Confirming…",
+    "confirmNote": "We'll confirm by phone or email within one business day.",
+    "successTitle": "You're booked!",
+    "successAt": "{date} at {time}",
+    "successNote": "We'll send a confirmation to {email}. See you soon, {name}!",
+    "refNum": "Ref # {id}",
+    "done": "Done",
+    "bookAnother": "Book another appointment",
+    "required": "Required",
+    "invalidEmail": "Enter a valid email",
+    "consentRequired": "Please confirm your consent to continue",
+    "services": ["General Checkup & Cleaning", "Cosmetic Consultation", "Teeth Whitening", "Invisalign Consultation", "Dental Implants", "Emergency Visit", "Crowns & Veneers"]
+  }
+}

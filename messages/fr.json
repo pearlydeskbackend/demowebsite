@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "about": "À notre sujet",
+    "services": "Services",
+    "office": "Notre Cabinet",
+    "team": "Équipe",
+    "faq": "FAQ",
+    "contacts": "Contact",
+    "cta": "Prendre rendez-vous",
+    "callMobile": "Prendre rendez-vous"
+  },
+  "hero": {
+    "tag1": "Vancouver, C.-B.",
+    "tag2": "Fondé en 2004",
+    "line1": "La dentisterie",
+    "line2": "qui vous fait",
+    "line3": "sourire",
+    "line4": "chaque jour.",
+    "sub": "Un cabinet dentaire familial et esthétique complet au cœur de Vancouver. Confortable, moderne et toujours prêt à accueillir de nouveaux patients.",
+    "cta": "Prendre rendez-vous",
+    "call": "Appeler le 604 879 9999"
+  },
+  "about": {
+    "label": "À propos de Kingsgate",
+    "heading1": "Nous transformons",
+    "heading2": "l'expérience dentaire.",
+    "sub": "Fondé et dirigé par les Drs Do et Largani, Kingsgate Dental est au service des familles vancouvéroises depuis notre emplacement sur Broadway depuis plus de deux décennies.",
+    "bentoLabel": "L'expérience Kingsgate",
+    "bentoHeading1": "Votre confort est",
+    "bentoHeading2": "notre priorité.",
+    "established": "Fondé en 2004",
+    "yearsBody": "Années au service des familles de Vancouver avec des soins dentaires experts et bienveillants.",
+    "address": "370 East Broadway, Vancouver BC",
+    "features": [
+      { "title": "Expérience cinéma", "body": "Des téléviseurs individuels à chaque fauteuil et des panneaux de plafond Skyfactory transforment votre rendez-vous en une escapade relaxante.", "tag": "Confort" },
+      { "title": "Soins d'urgence", "body": "Les urgences dentaires ne respectent pas les horaires de bureau. Le Dr Do et notre équipe sont disponibles pour un soulagement urgent le jour même.", "tag": "Urgent" },
+      { "title": "Certifié Invisalign", "body": "Gouttières transparentes personnalisées. Pas de brackets métalliques — juste un sourire confiant, à votre rythme.", "tag": "Esthétique" },
+      { "title": "Formés à la Faculté UBC", "body": "Nos dentistes ont été instructeurs cliniques à la Faculté de médecine dentaire de l'UBC.", "tag": "Expertise" },
+      { "title": "Lun – Sam", "body": "Ouvert six jours par semaine, de 9h30 à 17h30. Nous accueillons les familles et les consultations sans rendez-vous.", "tag": "Accessible" },
+      { "title": "Stationnement gratuit", "body": "Situé au niveau inférieur du Kingsgate Mall. Stationnement gratuit directement devant notre cabinet.", "tag": "Pratique" }
+    ]
+  },
+  "services": {
+    "label": "Nos Services",
+    "heading1": "Des soins dentaires complets,",
+    "heading2": "en un seul endroit.",
+    "sub": "Des nettoyages de routine aux restaurations complexes, notre équipe couvre chaque aspect de votre santé bucco-dentaire sous un même toit.",
+    "cta": "Prendre rendez-vous",
+    "disclaimer": "Nouveaux patients bienvenus · Consultations sans rendez-vous acceptées",
+    "includes": "Comprend",
+    "list": [
+      { "index": "01", "title": "Dentisterie générale", "category": "Base", "description": "Des soins de santé bucco-dentaire complets pour toute la famille. Les nettoyages réguliers éliminent la plaque et le tartre, prévenant les caries et les maladies des gencives. Nos hygiénistes offrent un niveau de propreté que le brossage à domicile ne peut tout simplement pas égaler.", "includes": ["Nettoyage et polissage", "Obturations et restaurations", "Examens de santé bucco-dentaire", "Radiographies et diagnostics"] },
+      { "index": "02", "title": "Correction Invisalign", "category": "Orthodontie", "description": "Redressez vos dents sans brackets métalliques grâce à une série de gouttières transparentes sur mesure. Amovibles pour manger et se brosser les dents, Invisalign offre les mêmes résultats qu'un appareil traditionnel — discrètement, selon votre calendrier.", "includes": ["Gouttières transparentes sur mesure", "Planification numérique du traitement", "Suivi des progrès", "Ajustement du contenant"] },
+      { "index": "03", "title": "Transformations esthétiques", "category": "Esthétique", "description": "Transformez votre sourire avec un blanchiment professionnel, un collage et des procédures cosmétiques conçus pour rehausser votre beauté naturelle. Nous nous concentrons sur des résultats qui semblent et paraissent complètement naturels.", "includes": ["Blanchiment professionnel", "Collage composite", "Consultation en conception de sourire", "Contourage cosmétique"] },
+      { "index": "04", "title": "Couronnes et bridges", "category": "Restauration", "description": "Restaurez les dents endommagées ou manquantes avec des couronnes et des bridges fabriqués avec précision. Chaque restauration est fabriquée en laboratoire pour correspondre à la couleur naturelle de vos dents et à votre morsure, cimentée de façon permanente pour une fonction durable.", "includes": ["Couronnes en porcelaine", "Bridges dentaires fixes", "Élongation coronaire", "Restaurations temporaires"] },
+      { "index": "05", "title": "Implants dentaires", "category": "Implantologie", "description": "La référence en matière de remplacement de dents manquantes. Un implant en titane ancre une dent prothétique de façon permanente à votre mâchoire, ressemblant et fonctionnant exactement comme une dent naturelle tout en préservant la densité osseuse.", "includes": ["Pose d'implant en titane", "Couronne prothétique sur mesure", "Préservation osseuse", "Consultation complète sur les implants"] },
+      { "index": "06", "title": "Dentisterie d'urgence", "category": "Soins urgents", "description": "Les urgences dentaires nécessitent une attention immédiate. Notre équipe traite les canaux radiculaires urgents, les extractions, les dents fissurées et les douleurs sévères — offrant un soulagement le jour même quand vous en avez le plus besoin.", "includes": ["Canaux radiculaires d'urgence", "Extractions urgentes", "Réparation de dents fissurées", "Gestion de la douleur"] },
+      { "index": "07", "title": "Traitement de canal", "category": "Endodontie", "description": "Lorsque la carie atteint la pulpe d'une dent, le traitement de canal élimine l'infection et sauve la dent. Les techniques modernes rendent cette procédure confortable et souvent réalisée en une seule visite.", "includes": ["Nettoyage de la chambre pulpaire", "Mise en forme et obturation du canal", "Couronne post-traitement", "Gestion de l'infection"] },
+      { "index": "08", "title": "Dentisterie pédiatrique", "category": "Famille", "description": "L'approche douce et amicale du Dr Do en fait un spécialiste naturel auprès des enfants. Nous créons des expériences dentaires positives dès le plus jeune âge, en instaurant de bonnes habitudes qui durent toute une vie.", "includes": ["Nettoyages pour enfants", "Traitements au fluorure", "Scellants", "Évaluation orthodontique précoce"] }
+    ]
+  },
+  "showcase": {
+    "label": "Nos Services",
+    "heading1": "Faites défiler pour explorer",
+    "heading2": "ce que nous faisons.",
+    "drag": "Faire glisser pour défiler",
+    "bookService": "Réserver ce service",
+    "items": [
+      { "label": "01 / Dentisterie générale", "title": "Des bases saines et propres", "description": "Des nettoyages réguliers et des soins préventifs qui gardent votre sourire éclatant et vos gencives en santé à vie.", "tag": "Prévention" },
+      { "label": "02 / Invisalign", "title": "Des dents droites, invisiblement", "description": "Des gouttières transparentes sur mesure qui perfectionnent progressivement votre sourire — sans métal, sans inconfort, sans compromis.", "tag": "Orthodontie" },
+      { "label": "03 / Esthétique", "title": "Votre plus beau sourire, conçu", "description": "Blanchiment professionnel, collage et contourage cosmétique conçus pour rehausser votre beauté naturelle.", "tag": "Esthétique" },
+      { "label": "04 / Implants", "title": "Permanent. Naturel. Le vôtre.", "description": "Des implants en titane qui ancrent une dent prothétique de façon permanente — indiscernables de la vraie dent.", "tag": "Restauration" },
+      { "label": "05 / Urgence", "title": "Du soulagement quand vous en avez besoin", "description": "Rendez-vous d'urgence le jour même pour les douleurs urgentes, les dents cassées et les besoins dentaires aigus.", "tag": "Soins urgents" }
+    ]
+  },
+  "office": {
+    "label": "Notre Cabinet",
+    "heading1": "L'expérience",
+    "heading2": "d'arrivée.",
+    "sub": "Nous avons conçu chaque détail de notre cabinet pour rendre votre visite aussi confortable et sans stress que possible. Dès le moment où vous entrez, vous êtes entre de bonnes mains.",
+    "directions": "Obtenir l'itinéraire",
+    "callUs": "Nous appeler",
+    "amenities": [
+      { "title": "Téléviseurs individuels", "body": "Chaque fauteuil de traitement dispose d'un téléviseur à écran plat dédié. Choisissez votre émission et laissez le temps s'écouler sans effort." },
+      { "title": "Plafonds Skyfactory", "body": "Nos panneaux de plafond Skyfactory affichent des images de la nature apaisante, transformant votre rendez-vous en un moment de calme." },
+      { "title": "Équipement moderne", "body": "Rénové en 2010, notre cabinet dispose des derniers fauteuils dentaires et de la technologie pour des soins précis et confortables." }
+    ],
+    "locationLabel": "Emplacement",
+    "locationVal": "Niveau inférieur, Kingsgate Mall\n370 East Broadway, Vancouver BC",
+    "hoursLabel": "Horaires",
+    "hoursVal": "Lun – Sam : 9h30 – 17h30\nDimanche : Fermé",
+    "parkingLabel": "Stationnement",
+    "parkingVal": "Stationnement gratuit disponible\ndirectement devant notre cabinet",
+    "phoneLabel": "Téléphone"
+  },
+  "team": {
+    "label": "Notre Équipe",
+    "heading1": "Il y a une équipe",
+    "heading2": "derrière",
+    "heading3": "chaque sourire",
+    "intro1": "Nous croyons qu'un sourire n'est pas seulement une question d'esthétique. C'est votre force, votre confiance et votre chaleur — et notre mission est de rendre le chemin vers ce sourire aussi confortable, transparent et rassurant que possible.",
+    "intro2": "L'équipe de professionnels de Kingsgate offre des soins de premier ordre grâce au travail d'équipe coordonné, à la technologie moderne et au véritable art de la dentisterie.",
+    "cosmeticTag": "Dentisterie esthétique et familiale",
+    "tabDental": "Équipe dentaire",
+    "tabAdmin": "Équipe administrative",
+    "philosophy": "Notre Philosophie",
+    "quote": "« Notre objectif est de créer et de maintenir des sourires heureux et sains pour les enfants, les adolescents, les adultes et les personnes âgées — dans un cadre confortable qui ressemble à la maison. »",
+    "quoteAttrib": "— Drs Do et Largani, Kingsgate Dental",
+    "dental": [
+      { "name": "Dr Tam Do", "role": "Dentiste principal", "specialty": "Dentisterie générale et familiale", "highlight": "Formé à la Faculté UBC", "credentials": ["DMD — Faculté de médecine dentaire de l'UBC, 2004", "B.Sc. Biochimie — UBC (Bourse d'entrée)", "99e percentile — Examen d'aptitude dentaire", "Prix de médecine buccale et pathologie buccale"], "bio": "Le Dr Do a passé ses années de formation à travers le nord du Canada avant d'élire domicile à Vancouver depuis 14 ans avec sa femme et ses trois enfants. Sa nature douce et amicale se traduit directement dans sa pratique — créant un environnement où les patients de tous âges se sentent vraiment à l'aise. Au-delà de la dentisterie générale et familiale, le Dr Do est passionné par les procédures esthétiques, Invisalign et les soins pédiatriques." },
+      { "name": "Dr Largani", "role": "Dentiste principal", "specialty": "Orthodontie et excellence clinique", "highlight": "Diplômé sur la liste du doyen", "credentials": ["DMD — Université de la Colombie-Britannique, 2009", "Diplômé sur la liste du doyen", "Prix de la meilleure pratique clinique", "Prix de la meilleure orthodontie"], "bio": "Le Dr Largani possède un double bagage académique — diplômé de l'Université Shahid Beheshti à Téhéran avant d'obtenir son DMD à l'UBC, où il a figuré sur la liste du doyen et reçu des prix pour la pratique clinique et l'orthodontie. Sa philosophie est centrée sur la fourniture des soins de la plus haute qualité grâce à l'apprentissage continu et à la participation active à des clubs d'étude." },
+      { "name": "Sarah Whitfield", "role": "Hygiéniste dentaire agréée", "specialty": "Soins préventifs et parodontaux", "highlight": "10+ ans à Kingsgate", "credentials": ["Dip. en hygiène dentaire — Vancouver College", "Certifiée en anesthésie locale", "Spécialiste en thérapie parodontale"], "bio": "Sarah s'occupe des familles de Kingsgate depuis plus d'une décennie, et est connue pour sa touche douce et sans hâte. Elle croit que la prévention est le fondement d'une santé bucco-dentaire à vie, et prend le temps de guider chaque patient à travers une routine qui s'adapte vraiment à leur vie." },
+      { "name": "Daniel Cho", "role": "Hygiéniste dentaire agréé", "specialty": "Hygiène et confort des patients", "highlight": "Soins adaptés à l'anxiété", "credentials": ["Dip. en hygiène dentaire — Camosun College", "Certifié en sédation au protoxyde d'azote", "Formé aux soins adaptés à l'anxiété"], "bio": "Daniel se spécialise dans le fait de mettre les patients nerveux à l'aise. Avec une approche calme et méthodique et un talent pour expliquer exactement ce qui se passe, il a aidé de nombreux nouveaux patients anxieux à devenir des habitués confortables." }
+    ],
+    "admin": [
+      { "name": "Maria Alvarez", "role": "Directrice du cabinet", "specialty": "Opérations du cabinet", "highlight": "Responsable de l'expérience patient", "credentials": ["15 ans en administration dentaire", "Spécialiste en assurance et facturation", "Responsable de l'expérience patient"], "bio": "Maria maintient Kingsgate en bon fonctionnement dans les coulisses — de la planification et de l'assurance à s'assurer que chaque patient se sente accueilli dès l'instant où il entre. Si vous avez une question sur votre visite, c'est elle qui a la réponse." },
+      { "name": "Priya Nair", "role": "Coordinatrice de traitement", "specialty": "Planification des soins et financement", "highlight": "Planification sans surprises", "credentials": ["Assistante dentaire certifiée", "Spécialiste en planification de traitement", "Conseillère en financement et avantages"], "bio": "Priya traduit les plans de traitement clinique en étapes claires et sans jargon et aide les patients à comprendre leur couverture et leurs options de financement. Son objectif est simple : pas de surprises, juste une voie à suivre dont vous vous sentez bien." },
+      { "name": "Emily Tran", "role": "Coordinatrice à l'accueil", "specialty": "Réception et planification", "highlight": "Votre premier bonjour", "credentials": ["Administration de bureau d'accueil", "Multilingue — EN / FR / VI", "Accueil des nouveaux patients"], "bio": "Emily est la première voix amicale que vous entendrez en appelant Kingsgate. Elle gère les réservations, les rappels et les formalités administratives des nouveaux patients avec chaleur et précision, pour que votre visite commence du bon pied." }
+    ]
+  },
+  "faq": {
+    "label": "Questions et réponses",
+    "heading1": "Avant votre visite,",
+    "heading2": "vous voudrez peut-être savoir.",
+    "sub": "Vous ne trouvez pas ce que vous cherchez ? Appelez-nous au (604) 879-9999 ou envoyez un message ci-dessous.",
+    "call": "Appeler le 604 879 9999",
+    "sendMessage": "Envoyer un message",
+    "categories": [
+      { "id": "new-patients", "label": "Nouveaux patients", "faqs": [
+        { "index": "01", "q": "Acceptez-vous de nouveaux patients ?", "a": "Oui — nous accueillons chaleureusement les nouveaux patients de tous âges. Appelez-nous simplement au (604) 879-9999 ou utilisez le formulaire de contact ci-dessous pour prendre votre premier rendez-vous. Nous nous occupons du reste." },
+        { "index": "02", "q": "Que dois-je apporter à mon premier rendez-vous ?", "a": "Veuillez apporter une pièce d'identité avec photo valide, votre carte d'assurance dentaire (le cas échéant) et une liste de tous les médicaments que vous prenez actuellement. Arriver 10 minutes à l'avance nous permet de remplir confortablement vos formulaires d'admission." },
+        { "index": "03", "q": "Acceptez-vous les enfants ?", "a": "Absolument. Le Dr Do a un don naturel avec les jeunes patients et prend soin de rendre leurs premières expériences dentaires positives et sans stress. Nous recommandons d'amener les enfants pour leur première visite autour de l'âge de 2 à 3 ans." },
+        { "index": "04", "q": "Proposez-vous des rendez-vous d'urgence ?", "a": "Oui. Nous réservons du temps dans notre programme quotidien pour les urgences dentaires. Si vous souffrez de douleurs sévères, d'une dent cassée ou d'un plombage perdu, appelez-nous immédiatement au (604) 879-9999 et nous vous verrons dès que possible." }
+      ]},
+      { "id": "services", "label": "Services", "faqs": [
+        { "index": "01", "q": "Quels services dentaires proposez-vous ?", "a": "Nous offrons une gamme complète de services comprenant les nettoyages de dents, les obturations, le blanchiment, Invisalign, les couronnes, les bridges, les implants dentaires, les canaux radiculaires, les extractions et la dentisterie pédiatrique — tout sous un même toit." },
+        { "index": "02", "q": "Combien de temps dure le traitement Invisalign ?", "a": "La durée du traitement varie selon la complexité de votre cas. La plupart des patients terminent leur parcours Invisalign en 6 à 18 mois. Lors de votre consultation, le Dr Do vous fournira un calendrier de traitement personnalisé." },
+        { "index": "03", "q": "Combien de temps dure le blanchiment professionnel ?", "a": "Le blanchiment professionnel en cabinet prend généralement une à deux heures et peut éclaircir les dents de plusieurs teintes en une seule séance. Nous proposons également des plateaux personnalisés à emporter pour une approche plus progressive." }
+      ]},
+      { "id": "comfort", "label": "Confort et sécurité", "faqs": [
+        { "index": "01", "q": "J'ai peur du dentiste. Comment pouvez-vous m'aider ?", "a": "Nous comprenons que la peur du dentiste est réelle et courante. Notre cabinet est conçu pour être apaisant — avec des images de plafond Skyfactory, des téléviseurs individuels et une équipe qui avance à votre rythme. Veuillez nous informer de vos préoccupations lors de la réservation afin que nous puissions nous préparer en conséquence." },
+        { "index": "02", "q": "Le traitement dentaire est-il douloureux ?", "a": "La dentisterie moderne a fait de grands progrès. Nous utilisons une anesthésie locale efficace pour toutes les procédures qui le nécessitent, et notre équipe est formée pour minimiser l'inconfort à chaque étape. La plupart des patients sont agréablement surpris par le confort de leur expérience." }
+      ]},
+      { "id": "location", "label": "Lieu et horaires", "faqs": [
+        { "index": "01", "q": "Où êtes-vous situés ?", "a": "Nous sommes situés au 370 East Broadway, Suite 112, au niveau inférieur du Kingsgate Mall — à l'intersection de East Broadway et Kingsway dans le quartier Mt. Pleasant de Vancouver." },
+        { "index": "02", "q": "Le stationnement est-il disponible ?", "a": "Oui, un stationnement gratuit est disponible directement devant le cabinet dans le stationnement du Kingsgate Mall. Nous sommes également accessibles par les transports en commun via le 99 B-Line et plusieurs lignes de bus le long de Broadway." },
+        { "index": "03", "q": "Quels sont vos horaires ?", "a": "Nous sommes ouverts du lundi au samedi, de 9h30 à 17h30. Nous sommes fermés les dimanches et les jours fériés. Nous vous recommandons d'appeler à l'avance pour confirmer la disponibilité, surtout pour les rendez-vous le jour même." }
+      ]}
+    ]
+  },
+  "contact": {
+    "label": "Nous trouver",
+    "heading1": "Nous sommes juste",
+    "heading2": "ici.",
+    "openInMaps": "Ouvrir dans Maps",
+    "aside": "Idéalement situé pour faciliter encore davantage votre rendez-vous — avec un accès sans marches pour les patients à mobilité réduite.",
+    "addressLabel": "Adresse",
+    "addressVal": "370 East Broadway, Niveau inférieur\nKingsgate Mall, Vancouver BC V5T 1X4",
+    "parking": "Un stationnement gratuit est disponible directement devant notre cabinet dans le stationnement du Kingsgate Mall, avec un accès facile aux transports en commun le long de Broadway.",
+    "directions": "Obtenir l'itinéraire",
+    "storefront": "Kingsgate Mall · East Broadway"
+  },
+  "footer": {
+    "tagline": "Un cabinet dentaire familial et esthétique complet au cœur de Vancouver, C.-B.",
+    "hours": "Lun – Sam : 9h30 – 17h30",
+    "servicesLabel": "Services",
+    "clinicLabel": "Cabinet",
+    "newPatientsLabel": "Nouveaux patients",
+    "newPatientsHeading": "Prêt à prendre votre premier rendez-vous ?",
+    "cta": "Prendre rendez-vous",
+    "emergencyLabel": "Urgence ?",
+    "emergencyText": "Appelez le (604) 879-9999 pour un soulagement le jour même",
+    "copyright": "© {year} Kingsgate Dental. Tous droits réservés.",
+    "footerAddress": "370 East Broadway, Vancouver BC · (604) 879-9999",
+    "services": ["Dentisterie générale", "Invisalign", "Dentisterie esthétique", "Implants dentaires", "Soins d'urgence", "Traitement de canal", "Dentisterie pédiatrique"],
+    "clinic": [["À notre sujet", "#about"], ["Notre équipe", "#team"], ["Notre cabinet", "#office"], ["FAQ", "#faq"], ["Nouveaux patients", "#contact"], ["Contact", "#contact"]]
+  },
+  "gallery": {
+    "label": "Vrais résultats",
+    "heading1": "Les sourires de nos patients",
+    "heading2": "parlent d'eux-mêmes.",
+    "sub": "Un aperçu du travail dont notre équipe est fière — des améliorations subtiles aux transformations complètes du sourire. Chaque résultat est un vrai patient qui nous a fait confiance.",
+    "cta": "Commencez votre parcours sourire",
+    "consent": "Photos avant et après partagées avec le consentement du patient"
+  },
+  "booking": {
+    "heading": "Prenez votre rendez-vous.",
+    "step": "Étape {step} sur 2",
+    "serviceLabel": "Service",
+    "servicePlaceholder": "Choisissez un service…",
+    "dateLabel": "Date",
+    "timesLabel": "Disponibilités",
+    "idleSlots": "Choisissez d'abord un service et une date…",
+    "checking": "Vérification des disponibilités…",
+    "noTimes": "Aucune disponibilité ce jour — veuillez essayer une autre date.",
+    "selected": "Sélectionné :",
+    "continue": "Continuer",
+    "back": "Retour",
+    "nameLabel": "Nom complet",
+    "emailLabel": "Courriel",
+    "phoneLabel": "Téléphone",
+    "phoneOptional": "(facultatif)",
+    "newPatient": "Je suis un nouveau patient",
+    "notesLabel": "Notes",
+    "notesPlaceholder": "Quelque chose que nous devrions savoir avant votre visite ?",
+    "consent": "Je consens à ce que Kingsgate Dental me contacte pour confirmer ce rendez-vous.",
+    "confirm": "Confirmer · {time}",
+    "confirming": "Confirmation en cours…",
+    "confirmNote": "Nous confirmerons par téléphone ou courriel dans un délai d'un jour ouvrable.",
+    "successTitle": "Vous êtes réservé !",
+    "successAt": "{date} à {time}",
+    "successNote": "Nous enverrons une confirmation à {email}. À bientôt, {name} !",
+    "refNum": "Réf. # {id}",
+    "done": "Terminé",
+    "bookAnother": "Prendre un autre rendez-vous",
+    "required": "Requis",
+    "invalidEmail": "Entrez un courriel valide",
+    "consentRequired": "Veuillez confirmer votre consentement pour continuer",
+    "services": ["Examen général et nettoyage", "Consultation esthétique", "Blanchiment des dents", "Consultation Invisalign", "Implants dentaires", "Visite d'urgence", "Couronnes et facettes"]
+  }
+}

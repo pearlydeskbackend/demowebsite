@@ -223,10 +223,13 @@ const ORB_CSS = `
     box-shadow: 0 32px 72px -16px rgba(0,0,0,0.70), 0 8px 24px -8px rgba(0,0,0,0.45);
     transform-origin: bottom right;
     opacity: 0; transform: translateY(18px) scale(0.95);
-    pointer-events: none;
-    transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16,1,0.3,1);
+    pointer-events: none; visibility: hidden;
+    transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0.28s;
   }
-  .bo-panel-open { opacity: 1; transform: none; pointer-events: auto; }
+  .bo-panel-open {
+    opacity: 1; transform: none; pointer-events: auto; visibility: visible;
+    transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0s;
+  }
 
   /* Panel header */
   .bo-panel-head {

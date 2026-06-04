@@ -60,14 +60,14 @@ export default function Team() {
   return (
     <section id="team" className="relative" style={{ background: "var(--dl-base)" }}>
       <div className="grid-line" />
-      <div className="w-full px-[clamp(1.5rem,5vw,6rem)]" style={{ paddingTop: "clamp(4rem,8vw,6rem)", paddingBottom: "clamp(4rem,8vw,6rem)" }}>
-        <Reveal><p className="text-label" style={{ marginBottom: "1.5rem" }}>{t("label")}</p></Reveal>
-        <AnimatedHeading style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500, color: "var(--dl-white)", letterSpacing: "-0.02em", lineHeight: 1.08, fontSize: "clamp(2rem,5vw,3.6rem)", maxWidth: "16ch", marginBottom: "clamp(2.75rem,5vw,3.75rem)" }}>
+      <div className="w-full px-[clamp(1.5rem,5vw,6rem)]" style={{ paddingTop: "clamp(2.5rem,5vw,3.5rem)", paddingBottom: "clamp(2.5rem,5vw,3.5rem)" }}>
+        <Reveal><p className="text-label" style={{ marginBottom: "1rem" }}>{t("label")}</p></Reveal>
+        <AnimatedHeading style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500, color: "var(--dl-white)", letterSpacing: "-0.02em", lineHeight: 1.08, fontSize: "clamp(1.75rem,3.5vw,2.6rem)", maxWidth: "16ch", marginBottom: "clamp(1.5rem,3vw,2.25rem)" }}>
           {t("heading1")} <em style={{ fontStyle: "italic", color: "var(--dl-mint)" }}>{t("heading2")}</em> {t("heading3")}
         </AnimatedHeading>
 
-        <div className="grid grid-cols-1 items-center" style={{ gap: "clamp(2rem,4vw,3.5rem)", paddingBottom: "clamp(3rem,6vw,4.5rem)", gridTemplateColumns: "1fr" }}>
-          <div className="grid grid-cols-1 md:grid-cols-[0.82fr_1fr] items-center" style={{ gap: "clamp(2rem,4vw,3.5rem)" }}>
+        <div className="grid grid-cols-1 items-center" style={{ gap: "clamp(1.25rem,2.5vw,2rem)", paddingBottom: "clamp(1.75rem,3.5vw,2.5rem)", gridTemplateColumns: "1fr" }}>
+          <div className="grid grid-cols-1 md:grid-cols-[0.82fr_1fr] items-center" style={{ gap: "clamp(1.25rem,2.5vw,2rem)" }}>
             <Reveal className="relative overflow-hidden" style={{ aspectRatio: "5/4", border: "1px solid var(--dl-grid)", background: "var(--dl-surface)" }}>
               <Image src={SMILE_IMG} alt="A confident, healthy smile" fill sizes="40vw" style={{ objectFit: "cover", filter: "brightness(0.88) saturate(0.88)" }} />
               <div className="absolute" style={{ left: "1.25rem", bottom: "1.25rem", padding: "0.5rem 0.75rem", border: "1px solid var(--dl-grid)", background: "rgba(13,25,20,0.82)", backdropFilter: "blur(8px)" }}>
@@ -75,17 +75,17 @@ export default function Team() {
               </div>
             </Reveal>
             <div>
-              <Reveal as="p" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400, color: "var(--dl-white)", fontSize: "clamp(1.3rem,2.2vw,1.85rem)", lineHeight: 1.5, letterSpacing: "-0.012em", marginBottom: "1.75rem" }}>
+              <Reveal as="p" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400, color: "var(--dl-white)", fontSize: "clamp(1.05rem,1.6vw,1.35rem)", lineHeight: 1.5, letterSpacing: "-0.012em", marginBottom: "1.1rem" }}>
                 {t("intro1")}
               </Reveal>
-              <Reveal as="p" delay={0.1} style={{ fontSize: "0.95rem", lineHeight: 1.85, color: "var(--dl-sage)", maxWidth: "48ch", paddingLeft: "1.25rem", borderLeft: "1px solid var(--dl-grid)" }}>
+              <Reveal as="p" delay={0.1} style={{ fontSize: "0.875rem", lineHeight: 1.8, color: "var(--dl-sage)", maxWidth: "48ch", paddingLeft: "1.25rem", borderLeft: "1px solid var(--dl-grid)" }}>
                 {t("intro2")}
               </Reveal>
             </div>
           </div>
         </div>
 
-        <Reveal className="flex gap-2 justify-center flex-wrap" style={{ borderTop: "1px solid var(--dl-grid)", borderBottom: "1px solid var(--dl-grid)", padding: "1.1rem 0", marginBottom: "clamp(2.5rem,5vw,3.5rem)" }}>
+        <Reveal className="flex gap-2 justify-center flex-wrap" style={{ borderTop: "1px solid var(--dl-grid)", borderBottom: "1px solid var(--dl-grid)", padding: "0.85rem 0", marginBottom: "clamp(1.5rem,3vw,2.25rem)" }}>
           {(["dental", "admin"] as const).map((tabKey) => (
             <button
               key={tabKey}
@@ -97,7 +97,7 @@ export default function Team() {
           ))}
         </Reveal>
 
-        <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(218px, 1fr))", gap: "clamp(1rem,2vw,1.75rem)" }}>
+        <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(175px, 1fr))", gap: "clamp(0.75rem,1.5vw,1.25rem)" }}>
           {list.map((d, i) => {
             const img = getImage(d.name);
             return (
@@ -105,7 +105,7 @@ export default function Team() {
                 key={d.name}
                 onClick={() => setActive(d)}
                 className="relative flex flex-col items-center text-center group"
-                style={{ padding: "clamp(2rem,3vw,2.75rem) 1.5rem 1.85rem", background: "var(--dl-surface)", border: "1px solid var(--dl-grid)", cursor: "pointer", animation: `tmRise 0.6s var(--ease-stagger) both`, animationDelay: `${i * 0.06}s`, transition: "border-color 0.4s, transform 0.4s, background 0.4s" }}
+                style={{ padding: "clamp(1.25rem,2vw,1.75rem) 1rem 1.25rem", background: "var(--dl-surface)", border: "1px solid var(--dl-grid)", cursor: "pointer", animation: `tmRise 0.6s var(--ease-stagger) both`, animationDelay: `${i * 0.06}s`, transition: "border-color 0.4s, transform 0.4s, background 0.4s" }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--dl-grid-hover)"; e.currentTarget.style.transform = "translateY(-5px)"; e.currentTarget.style.background = "#14241D"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--dl-grid)"; e.currentTarget.style.transform = "none"; e.currentTarget.style.background = "var(--dl-surface)"; }}
                 aria-label={`View profile of ${d.name}`}
@@ -113,7 +113,7 @@ export default function Team() {
                 <span className="absolute flex items-center justify-center" style={{ top: "1rem", right: "1rem", width: 34, height: 34, borderRadius: "50%", border: "1px solid var(--dl-grid)", color: "var(--dl-sage)", transition: "all 0.4s" }}>
                   <ArrowUpRight size={16} />
                 </span>
-                <span className="overflow-hidden" style={{ width: "clamp(118px,15vw,148px)", height: "clamp(118px,15vw,148px)", borderRadius: "50%", marginBottom: "1.4rem", border: "1px solid var(--dl-grid)", background: "var(--dl-base)", display: "block", position: "relative" }}>
+                <span className="overflow-hidden" style={{ width: "clamp(88px,11vw,116px)", height: "clamp(88px,11vw,116px)", borderRadius: "50%", marginBottom: "0.9rem", border: "1px solid var(--dl-grid)", background: "var(--dl-base)", display: "block", position: "relative" }}>
                   <Image src={img} alt={d.name} fill sizes="148px" style={{ objectFit: "cover", objectPosition: "center top" }} />
                 </span>
                 <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.18rem", color: "var(--dl-white)", fontWeight: 500, letterSpacing: "-0.01em", marginBottom: "0.45rem" }}>{d.name}</span>
@@ -124,7 +124,7 @@ export default function Team() {
         </div>
       </div>
 
-      <Reveal style={{ padding: "clamp(4rem,8vw,6rem) 0", borderBottom: "1px solid var(--dl-grid)" }}>
+      <Reveal style={{ padding: "clamp(2rem,4vw,3rem) 0", borderBottom: "1px solid var(--dl-grid)" }}>
         <div className="w-full px-[clamp(1.5rem,5vw,6rem)]">
           <div className="text-center mx-auto" style={{ maxWidth: 800 }}>
             <p className="text-label" style={{ marginBottom: "1.5rem" }}>{t("philosophy")}</p>

@@ -65,13 +65,28 @@ export default function Nav() {
       <header
         ref={navRef}
         style={{ opacity: 0 }}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "backdrop-blur-2xl bg-[rgba(13,25,20,0.92)] border-b border-white/[0.06]"
-            : "bg-transparent"
-        }`}
+        className="fixed inset-x-0 top-0 z-50"
       >
-        <div className="w-full pl-[clamp(1.5rem,5vw,6rem)] pr-0 md:px-[clamp(1.5rem,5vw,6rem)]">
+        {/*
+          Frosted backdrop — lives in its own layer so the gradient mask
+          only clips the blur, never the nav text.
+          Extends 4rem below the bar then fades to transparent.
+        */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 pointer-events-none"
+          style={{
+            height: "calc(100% + 4rem)",
+            background: scrolled ? "rgba(13,25,20,0.86)" : "rgba(13,25,20,0.40)",
+            backdropFilter: "blur(22px) saturate(160%)",
+            WebkitBackdropFilter: "blur(22px) saturate(160%)",
+            maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)",
+            transition: "background 0.5s ease",
+          }}
+        />
+        {/* Nav content — position:relative sits above the blur layer in DOM order */}
+        <div className="relative w-full pl-[clamp(1.5rem,5vw,6rem)] pr-0 md:px-[clamp(1.5rem,5vw,6rem)]">
           <div
             className="flex items-center justify-between xl:grid xl:items-center"
             style={{ gridTemplateColumns: "1fr auto 1fr", height: "5rem", gap: "1.5rem" }}

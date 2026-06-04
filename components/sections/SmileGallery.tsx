@@ -10,15 +10,17 @@ export default function SmileGallery() {
   const t = useTranslations("gallery");
   const { open: openBooking } = useBooking();
 
-  // Flatten the three masonry columns into a single ordered array
-  const tiles = [...smileGallery.left, ...smileGallery.mid, ...smileGallery.right];
+  // Flatten then trim to 12 — the LCM of 2 (mobile cols) and 3 (desktop cols).
+  // Gives 6 perfectly even rows on mobile and 4 on desktop with zero trailing gap.
+  // Dropped: smile-09, smile-10, smile-11, smile-16, smile-17 (last 5 of 17).
+  const tiles = [...smileGallery.left, ...smileGallery.mid, ...smileGallery.right].slice(0, 12);
 
   return (
     <section id="results" style={{ background: "var(--dl-mint)" }}>
       {/* ── Heading block ── */}
       <div
         className="w-full px-[clamp(1.5rem,5vw,6rem)]"
-        style={{ paddingTop: "clamp(4rem,8vw,6rem)", paddingBottom: "clamp(2rem,4vw,2.5rem)" }}
+        style={{ paddingTop: "clamp(5rem,10vw,8rem)", paddingBottom: "clamp(2.5rem,5vw,3.5rem)" }}
       >
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
@@ -41,9 +43,9 @@ export default function SmileGallery() {
         </div>
       </div>
 
-      {/* ── Tight uniform grid — 2 cols → 3 md → 4 lg ── */}
+      {/* ── Tight uniform grid — 2 cols mobile / 3 cols desktop ── */}
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        className="grid grid-cols-2 md:grid-cols-3"
         style={{ gap: "2px" }}
       >
         {tiles.map((tile) => (
@@ -80,7 +82,7 @@ export default function SmileGallery() {
       {/* ── CTA row ── */}
       <div
         className="w-full px-[clamp(1.5rem,5vw,6rem)]"
-        style={{ paddingTop: "clamp(2rem,4vw,3rem)", paddingBottom: "clamp(4rem,8vw,6rem)" }}
+        style={{ paddingTop: "clamp(3rem,6vw,4.5rem)", paddingBottom: "clamp(5rem,10vw,8rem)" }}
       >
         <Reveal className="flex flex-col sm:flex-row sm:items-center gap-5">
           <button

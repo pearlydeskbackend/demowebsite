@@ -6,6 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    // Touch devices have native inertia scroll — Lenis adds no value and can
+    // intercept touch events, so skip it entirely on coarse-pointer devices.
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const lenis = new Lenis({ lerp: 0.08, smoothWheel: true, syncTouch: false });
 
     // Single RAF loop: drive Lenis from GSAP's ticker.

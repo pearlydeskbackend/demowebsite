@@ -17,7 +17,10 @@ type Props = {
 export default function MagneticButton({ children, as: Tag = "button", className, style, strength = 0.4, ...rest }: Props) {
   const ref = useRef<HTMLElement>(null);
 
+  const isTouch = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
+
   const onMove = (e: React.MouseEvent) => {
+    if (isTouch) return;
     const el = ref.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
@@ -27,6 +30,7 @@ export default function MagneticButton({ children, as: Tag = "button", className
   };
 
   const onLeave = () => {
+    if (isTouch) return;
     const el = ref.current;
     if (!el) return;
     gsap.to(el, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1, 0.4)" });
@@ -36,7 +40,7 @@ export default function MagneticButton({ children, as: Tag = "button", className
     <Tag
       ref={ref}
       className={className}
-      style={{ display: "inline-block", ...style }}
+      style={{ display: "inline-block", touchAction: "manipulation", ...style }}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
       {...rest}

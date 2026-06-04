@@ -31,8 +31,9 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   img { display: block; max-width: 100%; }
-  button { font-family: inherit; cursor: pointer; }
-  a { text-decoration: none; color: inherit; }
+  button { font-family: inherit; cursor: pointer; touch-action: manipulation; }
+  a { text-decoration: none; color: inherit; touch-action: manipulation; }
+  input, select, textarea { touch-action: manipulation; }
 }
 
 /* Lenis smooth scroll */

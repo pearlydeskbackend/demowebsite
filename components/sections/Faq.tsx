@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus } from "lucide-react";
 import Reveal from "@/components/anim/Reveal";
 import AnimatedHeading from "@/components/anim/AnimatedHeading";
-import MagneticButton from "@/components/anim/MagneticButton";
 import { useTranslations } from "next-intl";
 
 type FaqItem = { index: string; q: string; a: string };
@@ -12,71 +11,143 @@ type FaqCategory = { id: string; label: string; faqs: FaqItem[] };
 export default function Faq() {
   const t = useTranslations("faq");
   const categories = t.raw("categories") as FaqCategory[];
-
   const [tab, setTab] = useState(categories[0].id);
   const [open, setOpen] = useState<string | null>(null);
   const cat = categories.find((c) => c.id === tab)!;
 
   return (
-    <section id="faq" className="relative" style={{ background: "var(--dl-deep)" }}>
-      <div className="grid-line" />
-      <div className="section-watermark" style={{ top: "-0.05em", right: 0, paddingRight: "1rem", textAlign: "right" }} aria-hidden>FAQ</div>
-      <div className="relative w-full px-[clamp(1.5rem,5vw,6rem)]" style={{ zIndex: 10, paddingTop: "clamp(4rem,8vw,6rem)", paddingBottom: "clamp(4rem,8vw,6rem)" }}>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8" style={{ marginBottom: "3.5rem" }}>
-          <div>
-            <Reveal><p className="text-label" style={{ marginBottom: "1.25rem" }}>{t("label")}</p></Reveal>
-            <AnimatedHeading style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.5rem,5vw,5.5rem)", lineHeight: 1.05, letterSpacing: "-0.04em", fontWeight: 500, color: "var(--dl-white)" }}>
-              {t("heading1")}<br /><em style={{ fontStyle: "italic", color: "var(--dl-mint)" }}>{t("heading2")}</em>
-            </AnimatedHeading>
-          </div>
-          <Reveal as="p" delay={0.15} style={{ fontSize: "1rem", maxWidth: 360, color: "var(--dl-sage)", lineHeight: 1.8 }}>
-            {t("sub")}
-          </Reveal>
-        </div>
+    <section id="faq" style={{ background: "var(--dl-mint)" }}>
+      <div
+        className="w-full px-[clamp(1.5rem,5vw,6rem)]"
+        style={{ paddingTop: "clamp(4rem,8vw,6rem)", paddingBottom: "clamp(4rem,8vw,6rem)" }}
+      >
+        {/* ── centred column ── */}
+        <div style={{ maxWidth: 860, margin: "0 auto" }}>
 
-        <Reveal className="flex flex-wrap" style={{ borderBottom: "1px solid var(--dl-grid)", marginBottom: "3rem" }}>
-          {categories.map((c) => (
-            <button
-              key={c.id}
-              onClick={() => { setTab(c.id); setOpen(null); }}
-              style={{ background: "none", border: "none", color: tab === c.id ? "var(--dl-white)" : "var(--dl-sage)", fontSize: "0.72rem", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase", padding: "1rem 1.25rem", borderBottom: tab === c.id ? "1px solid var(--dl-mint)" : "1px solid transparent", marginBottom: -1, transition: "color 0.3s, border-color 0.3s" }}
+          {/* Heading block */}
+          <div style={{ marginBottom: "clamp(2.5rem,5vw,3.5rem)" }}>
+            <Reveal>
+              <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.7rem", letterSpacing: "0.18em", textTransform: "uppercase", fontWeight: 500, color: "rgba(13,25,20,0.45)", marginBottom: "1.25rem" }}>
+                {t("label")}
+              </p>
+            </Reveal>
+            <AnimatedHeading
+              as="h2"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.5rem,5vw,5rem)", lineHeight: 1.05, letterSpacing: "-0.04em", fontWeight: 500, color: "var(--dl-base)" }}
             >
-              {c.label}
-            </button>
-          ))}
-        </Reveal>
+              {t("heading1")}
+              <br />
+              <em style={{ fontStyle: "italic", color: "rgba(13,25,20,0.45)" }}>{t("heading2")}</em>
+            </AnimatedHeading>
+            <Reveal>
+              <p style={{ marginTop: "1.25rem", fontSize: "1rem", color: "rgba(13,25,20,0.60)", lineHeight: 1.75, maxWidth: 520 }}>
+                {t("sub")}
+              </p>
+            </Reveal>
+          </div>
 
-        <Reveal>
-          {cat.faqs.map((f, i) => {
-            const key = `${tab}-${f.index}`;
-            const isOpen = open === key;
-            return (
-              <div key={key} style={{ borderTop: "1px solid var(--dl-grid)", borderBottom: i === cat.faqs.length - 1 ? "1px solid var(--dl-grid)" : undefined, background: isOpen ? "rgba(163,184,153,0.02)" : "transparent", transition: "background 0.5s" }}>
-                <button className="w-full flex items-center text-left" style={{ gap: "clamp(1.5rem,2.5vw,2.5rem)", padding: "clamp(1.75rem,2vw,2rem) 0", background: "none", border: "none" }} onClick={() => setOpen(isOpen ? null : key)} aria-expanded={isOpen}>
-                  <span className="flex-shrink-0" style={{ width: "2rem", fontFamily: "'Playfair Display', serif", fontSize: "0.85rem", color: isOpen ? "var(--dl-mint)" : "var(--dl-sage)" }}>{f.index}</span>
-                  <span className="flex-1" style={{ fontFamily: "'Playfair Display', serif", color: isOpen ? "var(--dl-white)" : "rgba(255,255,255,0.75)", fontSize: "clamp(1rem,1.8vw,1.4rem)", letterSpacing: "-0.02em", fontWeight: 500, transition: "color 0.5s" }}>{f.q}</span>
-                  <span className="flex items-center justify-center flex-shrink-0" style={{ width: "2rem", height: "2rem", border: "1px solid var(--dl-grid-hover)", color: isOpen ? "var(--dl-base)" : "var(--dl-sage)", background: isOpen ? "var(--dl-mint)" : "transparent", borderColor: isOpen ? "var(--dl-mint)" : "var(--dl-grid-hover)", transition: "all 0.5s var(--ease-magnetic)" }}>
-                    {isOpen ? <Minus size={13} /> : <Plus size={13} />}
-                  </span>
+          {/* Category tabs */}
+          <Reveal>
+            <div style={{ display: "flex", flexWrap: "wrap", borderBottom: "1px solid rgba(13,25,20,0.15)", marginBottom: 0 }}>
+              {categories.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => { setTab(c.id); setOpen(null); }}
+                  style={{
+                    background: "none", border: "none", cursor: "pointer",
+                    fontFamily: "'Satoshi','Inter',sans-serif",
+                    color: tab === c.id ? "var(--dl-base)" : "rgba(13,25,20,0.42)",
+                    fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase",
+                    padding: "0.875rem 1.25rem",
+                    borderBottom: tab === c.id ? "2px solid var(--dl-base)" : "2px solid transparent",
+                    marginBottom: -1,
+                    transition: "color 0.25s, border-color 0.25s",
+                  }}
+                >
+                  {c.label}
                 </button>
-                <div className={`accordion-grid ${isOpen ? "open" : ""}`}>
-                  <div className="accordion-inner">
-                    <div style={{ padding: "0 1rem 2.5rem", paddingLeft: "clamp(3.5rem,5vw,5rem)" }}>
-                      <p style={{ fontSize: "1rem", color: "var(--dl-sage)", lineHeight: 1.85, paddingBottom: "0.5rem" }}>{f.a}</p>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Accordion rows */}
+          <Reveal>
+            <div style={{ borderTop: "1px solid rgba(13,25,20,0.12)" }}>
+              {cat.faqs.map((f) => {
+                const key = `${tab}-${f.index}`;
+                const isOpen = open === key;
+                return (
+                  <div key={key} style={{ borderBottom: "1px solid rgba(13,25,20,0.12)" }}>
+                    <button
+                      className="w-full flex items-center justify-between text-left"
+                      style={{ padding: "1.5rem 0", background: "none", border: "none", cursor: "pointer", gap: "1.5rem" }}
+                      onClick={() => setOpen(isOpen ? null : key)}
+                      aria-expanded={isOpen}
+                    >
+                      <span style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: "var(--dl-base)",
+                        fontSize: "clamp(1rem,1.6vw,1.2rem)",
+                        letterSpacing: "-0.02em",
+                        fontWeight: 500,
+                        lineHeight: 1.35,
+                      }}>
+                        {f.q}
+                      </span>
+                      {/* Rotating "+" → "×" */}
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          flexShrink: 0, width: "2rem", height: "2rem",
+                          display: "flex", alignItems: "center", justifyContent: "center",
+                          border: "1px solid rgba(13,25,20,0.22)",
+                          color: "var(--dl-base)",
+                          transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+                          transition: "transform 0.35s cubic-bezier(0.16,1,0.3,1)",
+                        }}
+                      >
+                        <Plus size={14} strokeWidth={1.5} />
+                      </span>
+                    </button>
+
+                    {/* Animated answer */}
+                    <div className={`accordion-grid${isOpen ? " open" : ""}`}>
+                      <div className="accordion-inner">
+                        <p style={{ paddingBottom: "1.75rem", fontSize: "0.9375rem", color: "rgba(13,25,20,0.62)", lineHeight: 1.85 }}>
+                          {f.a}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
-        </Reveal>
+                );
+              })}
+            </div>
+          </Reveal>
 
-        <Reveal className="flex flex-col sm:flex-row sm:items-center gap-5" style={{ marginTop: "3.5rem" }}>
-          <MagneticButton as="a" href="tel:6048799999" className="btn-primary">{t("call")}</MagneticButton>
-          <MagneticButton className="btn-ghost" strength={0.3} onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}>{t("sendMessage")}</MagneticButton>
-        </Reveal>
+          {/* CTAs */}
+          <Reveal>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4" style={{ marginTop: "3rem" }}>
+              <a
+                href="tel:6048799999"
+                style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "var(--dl-base)", color: "var(--dl-mint)", fontFamily: "'Satoshi','Inter',sans-serif", fontWeight: 500, fontSize: "0.9rem", padding: "0.95rem 2.25rem", border: "1px solid var(--dl-base)", borderRadius: 999, textDecoration: "none", transition: "background 0.35s, color 0.35s", whiteSpace: "nowrap" }}
+                onMouseEnter={(e) => { const el = e.currentTarget; el.style.background = "transparent"; el.style.color = "var(--dl-base)"; }}
+                onMouseLeave={(e) => { const el = e.currentTarget; el.style.background = "var(--dl-base)"; el.style.color = "var(--dl-mint)"; }}
+              >
+                {t("call")}
+              </a>
+              <button
+                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "transparent", color: "var(--dl-base)", fontFamily: "'Satoshi','Inter',sans-serif", fontWeight: 500, fontSize: "0.9rem", padding: "0.95rem 2.25rem", border: "1px solid rgba(13,25,20,0.28)", borderRadius: 999, cursor: "pointer", transition: "border-color 0.35s", whiteSpace: "nowrap" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--dl-base)"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(13,25,20,0.28)"; }}
+              >
+                {t("sendMessage")}
+              </button>
+            </div>
+          </Reveal>
+
+        </div>
       </div>
-      <div className="grid-line" />
     </section>
   );
 }

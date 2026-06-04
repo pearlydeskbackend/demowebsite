@@ -5,8 +5,8 @@ import { useBooking } from "@/lib/BookingContext";
 import { getAvailableSlots, createBooking } from "@/lib/bookingService";
 import { useTranslations } from "next-intl";
 
-const OPT_BG = "#d8ecce";
-const OPT_FG = "#0D1914";
+const OPT_BG = "#09110E";
+const OPT_FG = "#E6F0DC";
 const TODAY   = new Date().toISOString().split("T")[0];
 
 type F = {
@@ -124,13 +124,13 @@ export default function BookingDrawer({ showBranding = true }: Props) {
   const goBack = () => { setErrors({}); setUiStep("when"); };
   const goNext = () => { setErrors({}); setUiStep("who"); };
 
-  const field: React.CSSProperties = { width: "100%", background: "rgba(255,255,255,0.55)", border: "1px solid rgba(13,25,20,0.16)", borderRadius: 6, padding: "0.75rem 1rem", color: "#0D1914", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.925rem", outline: "none", colorScheme: "light", transition: "border-color 0.25s" };
+  const field: React.CSSProperties = { width: "100%", background: "transparent", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 6, padding: "0.75rem 1rem", color: "var(--dl-white)", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.925rem", outline: "none", colorScheme: "dark", transition: "border-color 0.25s" };
   const selectField: React.CSSProperties = { ...field, background: OPT_BG, color: OPT_FG };
   const lbl: React.CSSProperties = { fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--dl-sage)", display: "block", marginBottom: "0.4rem" };
   const err: React.CSSProperties = { fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.7rem", color: "#f87171", marginTop: "0.3rem" };
-  const onFocus = (el: HTMLElement) => { el.style.borderColor = "rgba(13,25,20,0.45)"; };
-  const onBlur  = (el: HTMLElement, hasErr: boolean) => { el.style.borderColor = hasErr ? "#f87171" : "rgba(13,25,20,0.16)"; };
-  const primaryBtn = (disabled = false): React.CSSProperties => ({ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.6rem", background: disabled ? "rgba(13,25,20,0.12)" : "var(--dl-mint)", color: "var(--dl-base)", fontFamily: "'Satoshi','Inter',sans-serif", fontWeight: 500, fontSize: "0.9rem", padding: "0.95rem 2.25rem", borderRadius: 999, border: "1px solid var(--dl-mint)", cursor: disabled ? "default" : "pointer", transition: "background 0.4s var(--ease-magnetic), color 0.4s var(--ease-magnetic)" });
+  const onFocus = (el: HTMLElement) => { el.style.borderColor = "rgba(255,255,255,0.38)"; };
+  const onBlur  = (el: HTMLElement, hasErr: boolean) => { el.style.borderColor = hasErr ? "#f87171" : "rgba(255,255,255,0.14)"; };
+  const primaryBtn = (disabled = false): React.CSSProperties => ({ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: "0.6rem", background: disabled ? "rgba(230,240,220,0.4)" : "var(--dl-mint)", color: "var(--dl-base)", fontFamily: "'Satoshi','Inter',sans-serif", fontWeight: 500, fontSize: "0.9rem", padding: "0.95rem 2.25rem", borderRadius: 999, border: "1px solid var(--dl-mint)", cursor: disabled ? "default" : "pointer", transition: "background 0.4s var(--ease-magnetic), color 0.4s var(--ease-magnetic)" });
 
   return (
     <>
@@ -140,12 +140,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
         ref={drawerRef}
         role="dialog" aria-modal="true"
         aria-label="Book an appointment at Kingsgate Dental"
-        style={{ position: "fixed", top: 0, right: 0, bottom: 0, zIndex: 100, width: "min(100vw, 460px)", background: "#E6F0DC", borderLeft: "1px solid rgba(13,25,20,0.12)", display: "flex", flexDirection: "column", transform: isOpen ? "translateX(0)" : "translateX(100%)", transition: "transform 300ms cubic-bezier(0.16,1,0.3,1)", overflowY: "auto",
-          // Override CSS variables for light-mint theme
-          "--dl-deep": "#E6F0DC", "--dl-base": "#c8e8c0", "--dl-surface": "rgba(255,255,255,0.45)",
-          "--dl-white": "#0D1914", "--dl-sage": "rgba(13,25,20,0.56)", "--dl-mint": "#5BAF82",
-          "--dl-grid": "rgba(13,25,20,0.10)", "--dl-grid-hover": "rgba(13,25,20,0.20)",
-        } as React.CSSProperties}
+        style={{ position: "fixed", top: 0, right: 0, bottom: 0, zIndex: 100, width: "min(100vw, 460px)", background: "var(--dl-deep)", borderLeft: "1px solid var(--dl-grid)", display: "flex", flexDirection: "column", transform: isOpen ? "translateX(0)" : "translateX(100%)", transition: "transform 300ms cubic-bezier(0.16,1,0.3,1)", overflowY: "auto" }}
       >
         <div style={{ padding: "1.75rem 2rem 1.25rem", borderBottom: "1px solid var(--dl-grid)", flexShrink: 0, position: "sticky", top: 0, background: "var(--dl-deep)", zIndex: 2 }}>
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
@@ -164,9 +159,9 @@ export default function BookingDrawer({ showBranding = true }: Props) {
           {!submitted && (
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginTop: "0.85rem" }}>
               {(["when", "who"] as UiStep[]).map((s) => (
-                <span key={s} style={{ width: uiStep === s ? 18 : 6, height: 6, borderRadius: 999, background: uiStep === s ? "var(--dl-mint)" : "rgba(13,25,20,0.18)", transition: "all 0.35s var(--ease-magnetic)", display: "inline-block" }} />
+                <span key={s} style={{ width: uiStep === s ? 18 : 6, height: 6, borderRadius: 999, background: uiStep === s ? "var(--dl-mint)" : "rgba(163,184,153,0.25)", transition: "all 0.35s var(--ease-magnetic)", display: "inline-block" }} />
               ))}
-              <span style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(13,25,20,0.40)", marginLeft: "0.25rem" }}>
+              <span style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(163,184,153,0.45)", marginLeft: "0.25rem" }}>
                 {t("step", { step: uiStep === "when" ? "1" : "2" })}
               </span>
             </div>
@@ -189,7 +184,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
                 {t("successNote", { email: form.email, name: form.name.split(" ")[0] })}
               </p>
               {confirmationId && (
-                <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(13,25,20,0.38)", margin: 0 }}>
+                <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(163,184,153,0.4)", margin: 0 }}>
                   {t("refNum", { id: confirmationId })}
                 </p>
               )}
@@ -219,15 +214,15 @@ export default function BookingDrawer({ showBranding = true }: Props) {
 
               <div>
                 <p style={{ ...lbl, marginBottom: "0.6rem" }}>{t("timesLabel")} <span style={{ color: "var(--dl-mint)" }}>*</span></p>
-                {slotState === "idle" && <div style={{ border: "1px solid rgba(13,25,20,0.10)", borderRadius: 6, padding: "1rem 1.25rem", color: "rgba(13,25,20,0.35)", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.85rem" }}>{t("idleSlots")}</div>}
+                {slotState === "idle" && <div style={{ border: "1px solid rgba(255,255,255,0.10)", borderRadius: 6, padding: "1rem 1.25rem", color: "rgba(163,184,153,0.35)", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.85rem" }}>{t("idleSlots")}</div>}
                 {slotState === "loading" && (
-                  <div className="skeleton-pulse" style={{ borderRadius: 6, background: "rgba(13,25,20,0.04)", border: "1px solid rgba(13,25,20,0.10)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
+                  <div className="skeleton-pulse" style={{ borderRadius: 6, background: "rgba(163,184,153,0.05)", border: "1px solid rgba(255,255,255,0.10)", padding: "1rem 1.25rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
                     <span style={{ width: 12, height: 12, borderRadius: "50%", border: "1.5px solid var(--dl-sage)", borderTopColor: "transparent", animation: "spin 0.7s linear infinite", display: "inline-block", flexShrink: 0 }} />
-                    <span style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.82rem", color: "rgba(13,25,20,0.40)" }}>{t("checking")}</span>
+                    <span style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.82rem", color: "rgba(163,184,153,0.45)" }}>{t("checking")}</span>
                   </div>
                 )}
                 {slotState === "empty" && (
-                  <div style={{ border: "1px solid rgba(13,25,20,0.10)", borderRadius: 6, padding: "1rem 1.25rem", display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
+                  <div style={{ border: "1px solid rgba(255,255,255,0.10)", borderRadius: 6, padding: "1rem 1.25rem", display: "flex", alignItems: "flex-start", gap: "0.75rem" }}>
                     <CalendarX size={15} style={{ color: "var(--dl-sage)", flexShrink: 0, marginTop: "0.1rem" }} />
                     <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.82rem", color: "var(--dl-sage)", lineHeight: 1.6, margin: 0 }}>{t("noTimes")}</p>
                   </div>
@@ -237,7 +232,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
                     {slots.map((slot) => {
                       const sel = form.time === slot;
                       return (
-                        <button key={slot} type="button" onClick={() => setForm((f) => ({ ...f, time: slot }))} style={{ padding: "0.6rem 0.25rem", borderRadius: 6, border: `1px solid ${sel ? "var(--dl-mint)" : "rgba(13,25,20,0.16)"}`, background: sel ? "rgba(13,25,20,0.08)" : "transparent", color: sel ? "var(--dl-mint)" : "var(--dl-sage)", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.8rem", fontWeight: sel ? 600 : 400, cursor: "pointer", transition: "border-color 0.2s, background 0.2s, color 0.2s", textAlign: "center" }}>{slot}</button>
+                        <button key={slot} type="button" onClick={() => setForm((f) => ({ ...f, time: slot }))} style={{ padding: "0.6rem 0.25rem", borderRadius: 6, border: `1px solid ${sel ? "var(--dl-mint)" : "rgba(255,255,255,0.14)"}`, background: sel ? "rgba(230,240,220,0.10)" : "transparent", color: sel ? "var(--dl-mint)" : "var(--dl-sage)", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.8rem", fontWeight: sel ? 600 : 400, cursor: "pointer", transition: "border-color 0.2s, background 0.2s, color 0.2s", textAlign: "center" }}>{slot}</button>
                       );
                     })}
                   </div>
@@ -256,7 +251,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
                 <button type="button" onClick={goBack} style={{ alignSelf: "flex-start", display: "flex", alignItems: "center", gap: "0.3rem", background: "none", border: "none", color: "var(--dl-sage)", fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.8rem", cursor: "pointer", padding: 0, transition: "color 0.2s" }} onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "var(--dl-white)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.color = "var(--dl-sage)"; }}>
                   <ChevronLeft size={14} /> {t("back")}
                 </button>
-                <div style={{ background: "rgba(13,25,20,0.04)", border: "1px solid var(--dl-grid)", borderRadius: 6, padding: "0.7rem 1rem" }}>
+                <div style={{ background: "rgba(163,184,153,0.06)", border: "1px solid var(--dl-grid)", borderRadius: 6, padding: "0.7rem 1rem" }}>
                   <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.78rem", color: "var(--dl-mint)", margin: 0, lineHeight: 1.5, fontWeight: 500 }}>{form.service}</p>
                   <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.75rem", color: "var(--dl-sage)", margin: "0.2rem 0 0", lineHeight: 1.4 }}>{fmtShort(form.date)} · {form.time}</p>
                 </div>
@@ -275,7 +270,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
               </div>
 
               <div>
-                <label htmlFor="bk-phone" style={lbl}>{t("phoneLabel")} <span style={{ color: "rgba(13,25,20,0.38)" }}>{t("phoneOptional")}</span></label>
+                <label htmlFor="bk-phone" style={lbl}>{t("phoneLabel")} <span style={{ color: "rgba(163,184,153,0.4)" }}>{t("phoneOptional")}</span></label>
                 <input id="bk-phone" type="tel" autoComplete="tel" value={form.phone} onChange={set("phone")} placeholder="(604) 555-0100" style={field} onFocus={(e) => onFocus(e.target as HTMLElement)} onBlur={(e) => onBlur(e.target as HTMLElement, false)} />
               </div>
 
@@ -285,7 +280,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
               </label>
 
               <div>
-                <label htmlFor="bk-notes" style={lbl}>{t("notesLabel")} <span style={{ color: "rgba(13,25,20,0.38)" }}>{t("phoneOptional")}</span></label>
+                <label htmlFor="bk-notes" style={lbl}>{t("notesLabel")} <span style={{ color: "rgba(163,184,153,0.4)" }}>{t("phoneOptional")}</span></label>
                 <textarea id="bk-notes" rows={2} value={form.notes} onChange={set("notes")} placeholder={t("notesPlaceholder")} style={{ ...field, resize: "vertical", minHeight: 68 }} onFocus={(e) => onFocus(e.target as HTMLElement)} onBlur={(e) => onBlur(e.target as HTMLElement, false)} />
               </div>
 
@@ -306,7 +301,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
                   )}
                 </button>
 
-                <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.68rem", color: "rgba(13,25,20,0.38)", textAlign: "center", margin: 0, lineHeight: 1.6 }}>{t("confirmNote")}</p>
+                <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.68rem", color: "rgba(163,184,153,0.4)", textAlign: "center", margin: 0, lineHeight: 1.6 }}>{t("confirmNote")}</p>
               </div>
             </form>
           )}
@@ -314,9 +309,9 @@ export default function BookingDrawer({ showBranding = true }: Props) {
 
         {showBranding && (
           <div style={{ flexShrink: 0, padding: "0.7rem 2rem 1rem", borderTop: "1px solid var(--dl-grid)", textAlign: "center" }}>
-            <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.64rem", letterSpacing: "0.04em", color: "rgba(13,25,20,0.35)", margin: 0 }}>
+            <p style={{ fontFamily: "'Satoshi','Inter',sans-serif", fontSize: "0.64rem", letterSpacing: "0.04em", color: "rgba(163,184,153,0.35)", margin: 0 }}>
               Powered by{" "}
-              <a href="https://connomi.com" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(13,25,20,0.55)", fontWeight: 500, textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "var(--dl-mint)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(13,25,20,0.55)"; }}>Connomi</a>
+              <a href="https://connomi.com" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(163,184,153,0.55)", fontWeight: 500, textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "var(--dl-mint)"; }} onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(163,184,153,0.55)"; }}>Connomi</a>
             </p>
           </div>
         )}

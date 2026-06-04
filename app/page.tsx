@@ -43,7 +43,7 @@ export default function Home() {
         <Footer />
       </SmoothScroll>
       <BookingDrawer />
-      <BookingOrb clinicName="Kingsgate Dental" accent="#7FB7C4" size={120} />
+      <BookingOrb clinicName="Kingsgate Dental" accent="#5BAF82" size={120} />
     </BookingProvider>
   );
 }

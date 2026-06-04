@@ -71,9 +71,9 @@ export default function Nav() {
             : "bg-transparent"
         }`}
       >
-        <div className="w-full pl-[clamp(1.5rem,5vw,6rem)] pr-1 md:pr-[clamp(1.5rem,5vw,6rem)]">
+        <div className="w-full pl-[clamp(1.5rem,5vw,6rem)] pr-0 md:px-[clamp(1.5rem,5vw,6rem)]">
           <div
-            className="grid items-center"
+            className="flex items-center justify-between xl:grid xl:items-center"
             style={{ gridTemplateColumns: "1fr auto 1fr", height: "5rem", gap: "1.5rem" }}
           >
             {/* Logo */}

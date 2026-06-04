@@ -30,7 +30,8 @@ const nextId = () => `m${++_id}`;
 const ORB_CSS = `
   .bo-root {
     position: fixed; right: 24px; bottom: max(24px, calc(env(safe-area-inset-bottom, 0px) + 16px)); z-index: 9999;
-    display: flex; flex-direction: column; align-items: flex-end; gap: 14px;
+    display: flex;
+    /* Panel and bubble float above via position:absolute — root stays orb-sized only */
     font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
@@ -189,7 +190,8 @@ const ORB_CSS = `
 
   /* ─── WELCOME BUBBLE ─────────────────────────────────────────────── */
   .bo-bubble {
-    position: relative; max-width: 240px;
+    position: absolute; right: 0; bottom: calc(var(--bo-size) + 10px);
+    max-width: 240px;
     background: #09110E; color: #FFFFFF;
     font-size: 0.875rem; line-height: 1.5; text-align: left;
     padding: 13px 17px; border: none; border-radius: 16px;
@@ -214,6 +216,8 @@ const ORB_CSS = `
 
   /* ─── CHAT PANEL ─────────────────────────────────────────────────── */
   .bo-panel {
+    /* Absolutely positioned above the orb — removed from flex flow so bo-root stays orb-sized */
+    position: absolute; right: 0; bottom: calc(var(--bo-size) + 14px);
     width: 340px; max-width: calc(100vw - 48px);
     height: 500px; max-height: calc(100vh - 140px);
     background: #09110E;

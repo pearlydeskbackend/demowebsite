@@ -17,16 +17,17 @@ export default function Showcase() {
   const { open: openBooking } = useBooking();
   const drag = useRef({ down: false, startX: 0, startScroll: 0, moved: false });
 
-  const onDown = (e: React.MouseEvent) => {
+  const onDown = (e: React.PointerEvent) => {
     const tr = track.current;
     if (!tr) return;
-    drag.current = { down: true, startX: e.pageX, startScroll: tr.scrollLeft, moved: false };
+    drag.current = { down: true, startX: e.clientX, startScroll: tr.scrollLeft, moved: false };
+    tr.setPointerCapture(e.pointerId);
     tr.style.cursor = "grabbing";
   };
-  const onMove = (e: React.MouseEvent) => {
+  const onMove = (e: React.PointerEvent) => {
     const tr = track.current;
     if (!tr || !drag.current.down) return;
-    const dx = e.pageX - drag.current.startX;
+    const dx = e.clientX - drag.current.startX;
     if (Math.abs(dx) > 4) drag.current.moved = true;
     tr.scrollLeft = drag.current.startScroll - dx;
   };
@@ -57,8 +58,8 @@ export default function Showcase() {
       <div
         ref={track}
         className="overflow-x-auto"
-        style={{ padding: "3rem clamp(1.5rem,5vw,3rem)", cursor: "grab", scrollbarWidth: "none" }}
-        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}
+        style={{ padding: "3rem clamp(1.5rem,5vw,3rem)", cursor: "grab", scrollbarWidth: "none", touchAction: "pan-x" }}
+        onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerLeave={onUp} onPointerCancel={onUp}
       >
         <div className="flex" style={{ gap: "1rem", minWidth: "max-content" }}>
           {items.map((it, idx) => {

@@ -106,7 +106,7 @@ export default function Hero() {
         onClick={() => setModalOpen(true)}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setModalOpen(true); }}
         className="hidden md:block"
-        style={{ position: "absolute", top: "50%", left: "48%", transform: "translate(-50%, -50%)", width: "clamp(260px, 28vw, 400px)", aspectRatio: "16 / 9", zIndex: 10, borderRadius: "14px", overflow: "hidden", cursor: "pointer", boxShadow: "0 24px 60px rgba(0,0,0,0.60), 0 4px 18px rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.12)" }}
+        style={{ position: "absolute", top: "50%", left: "48%", transform: "translate(-50%, -50%)", width: "clamp(260px, 28vw, 400px)", aspectRatio: "16 / 9", zIndex: 10, borderRadius: "0", overflow: "hidden", cursor: "pointer", boxShadow: "0 24px 60px rgba(0,0,0,0.60), 0 4px 18px rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.12)" }}
       >
         {/* Autoplaying muted preview — pointer-events none so clicks reach the card */}
         <iframe
@@ -152,7 +152,7 @@ export default function Hero() {
           aria-label="Watch clinic video"
           onClick={() => setModalOpen(true)}
           onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setModalOpen(true); }}
-          style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: "16px", overflow: "hidden", cursor: "pointer", boxShadow: "0 16px 48px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.30)", border: "1px solid rgba(255,255,255,0.12)", marginBottom: "1.75rem" }}
+          style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: "0", overflow: "hidden", cursor: "pointer", boxShadow: "0 16px 48px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.30)", border: "1px solid rgba(255,255,255,0.12)", marginBottom: "1.75rem" }}
         >
           <Image src="/assets/our-office-img-9-952x667.jpg" alt="Inside Kingsgate Dental — click to play video" fill sizes="(max-width: 768px) 100vw" style={{ objectFit: "cover", objectPosition: "center center" }} />
           <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.28)" }} />

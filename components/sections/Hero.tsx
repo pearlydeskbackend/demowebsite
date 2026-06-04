@@ -94,6 +94,9 @@ export default function Hero() {
               {t("call")}
             </MagneticButton>
           </div>
+          <p data-hero-fade style={{ marginTop: "1rem", fontSize: "0.8rem", color: "var(--dl-sage)", opacity: 0.7, letterSpacing: "0.04em", textTransform: "uppercase" }}>
+            Mon – Sat &nbsp;·&nbsp; 9:30 am – 5:30 pm
+          </p>
         </div>
       </div>
 
@@ -164,6 +167,9 @@ export default function Hero() {
             {t("call")}
           </a>
         </div>
+        <p data-hero-fade style={{ marginTop: "0.875rem", fontSize: "0.75rem", color: "var(--dl-sage)", opacity: 0.7, letterSpacing: "0.04em", textTransform: "uppercase", textAlign: "center" }}>
+          Mon – Sat &nbsp;·&nbsp; 9:30 am – 5:30 pm
+        </p>
 
       </div>
 

@@ -5,7 +5,6 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Showcase from "@/components/sections/Showcase";
 import Office from "@/components/sections/Office";
@@ -31,7 +30,6 @@ export default function Home() {
         <Nav />
         <main>
           <Hero />
-          <About />
           <Services />
           <Showcase />
           <Office />

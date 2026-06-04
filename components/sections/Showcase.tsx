@@ -40,15 +40,19 @@ export default function Showcase() {
   return (
     <section className="relative" style={{ background: "var(--dl-base)" }}>
       <div className="grid-line" />
-      <div className="w-full px-[clamp(1.5rem,5vw,6rem)]" style={{ paddingTop: "clamp(4rem,8vw,6rem)", paddingBottom: "clamp(4rem,8vw,6rem)" }}>
+      {/* was clamp(4rem,8vw,6rem) top+bottom → tighter to compress the region */}
+      {/* WAS: clamp(2.5rem,5vw,4rem) top+bottom */}
+      <div className="w-full px-[clamp(1.5rem,5vw,6rem)]" style={{ paddingTop: "clamp(1.25rem,2.5vw,2rem)", paddingBottom: "clamp(1.25rem,2.5vw,2rem)" }}>
         <div className="flex items-end justify-between">
           <div>
-            <Reveal><p className="text-label" style={{ marginBottom: "1.25rem" }}>{t("label")}</p></Reveal>
-            <AnimatedHeading style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.5rem,5vw,5.5rem)", lineHeight: 1.05, letterSpacing: "-0.04em", fontWeight: 500, color: "var(--dl-white)" }}>
+            {/* WAS: marginBottom 0.75rem */}
+            <Reveal y={20} duration={0.5}><p className="text-label" style={{ marginBottom: "0.35rem" }}>{t("label")}</p></Reveal>
+            {/* WAS: clamp(2.5rem,5vw,5.5rem) */}
+            <AnimatedHeading style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem,4vw,4rem)", lineHeight: 1.05, letterSpacing: "-0.04em", fontWeight: 500, color: "var(--dl-white)" }}>
               {t("heading1")}<br /><em style={{ fontStyle: "italic", color: "var(--dl-mint)" }}>{t("heading2")}</em>
             </AnimatedHeading>
           </div>
-          <Reveal className="hidden md:flex items-center gap-3" style={{ color: "var(--dl-sage)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
+          <Reveal y={20} duration={0.5} className="hidden md:flex items-center gap-3" style={{ color: "var(--dl-sage)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
             <span>{t("drag")}</span>
             <ArrowRight size={14} />
           </Reveal>
@@ -58,7 +62,7 @@ export default function Showcase() {
       <div
         ref={track}
         className="overflow-x-auto"
-        style={{ padding: "3rem clamp(1.5rem,5vw,3rem)", cursor: "grab", scrollbarWidth: "none", touchAction: "pan-x" }}
+        style={{ padding: "0.875rem clamp(1.5rem,5vw,2.5rem)", cursor: "grab", scrollbarWidth: "none", touchAction: "pan-x" }}
         onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerLeave={onUp} onPointerCancel={onUp}
       >
         <div className="flex" style={{ gap: "1rem", minWidth: "max-content" }}>
@@ -71,7 +75,8 @@ export default function Showcase() {
                 style={{ width: "clamp(260px,26vw,340px)", border: "1px solid var(--dl-grid)", background: "var(--dl-surface)" }}
                 onClickCapture={(e) => { if (drag.current.moved) { e.preventDefault(); e.stopPropagation(); } }}
               >
-                <div className="relative overflow-hidden" style={{ height: 280 }}>
+                {/* WAS: height 280 */}
+                <div className="relative overflow-hidden" style={{ height: 180 }}>
                   {raw?.image ? (
                     <>
                       <Image src={raw.image} alt={it.title} fill sizes="340px" style={{ objectFit: "cover", filter: "brightness(0.75) saturate(0.8)" }} draggable={false} />
@@ -90,12 +95,13 @@ export default function Showcase() {
                     <span className="text-label">{it.tag}</span>
                   </div>
                 </div>
-                <div className="flex flex-col flex-1" style={{ padding: "1.5rem", background: "var(--dl-surface)", borderTop: "1px solid var(--dl-grid)" }}>
+                {/* WAS: padding 1.5rem / h3 margin 0.75rem 0 / lineHeight 1.8 / button mt-5 */}
+                <div className="flex flex-col flex-1" style={{ padding: "0.875rem", background: "var(--dl-surface)", borderTop: "1px solid var(--dl-grid)" }}>
                   <p className="text-label">{it.label}</p>
-                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.125rem", fontWeight: 500, color: "var(--dl-white)", lineHeight: 1.3, margin: "0.75rem 0" }}>{it.title}</h3>
-                  <p className="flex-1" style={{ fontSize: "0.875rem", color: "var(--dl-sage)", lineHeight: 1.8 }}>{it.description}</p>
+                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", fontWeight: 500, color: "var(--dl-white)", lineHeight: 1.3, margin: "0.4rem 0" }}>{it.title}</h3>
+                  <p className="flex-1" style={{ fontSize: "0.8rem", color: "var(--dl-sage)", lineHeight: 1.6 }}>{it.description}</p>
                   <button
-                    className="flex items-center gap-2 mt-5"
+                    className="flex items-center gap-2 mt-3"
                     style={{ background: "none", border: "none", color: "var(--dl-sage)", fontSize: "0.7rem", fontWeight: 500, letterSpacing: "0.1em", textTransform: "uppercase" }}
                     onClick={openBooking}
                   >

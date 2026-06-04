@@ -10,12 +10,13 @@ type Props = {
   style?: React.CSSProperties;
   delay?: number;
   y?: number;
+  duration?: number;
   /** stagger direct children instead of the element itself */
   stagger?: number;
 };
 
 /** Scroll-triggered fade + slide-up. The LAVA section-reveal idiom. */
-export default function Reveal({ children, as: Tag = "div", className, style, delay = 0, y = 40, stagger }: Props) {
+export default function Reveal({ children, as: Tag = "div", className, style, delay = 0, y = 40, duration = 1, stagger }: Props) {
   const ref = useRef<HTMLElement>(null);
 
   useGSAP(
@@ -33,7 +34,7 @@ export default function Reveal({ children, as: Tag = "div", className, style, de
         {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration,
           ease: "power3.out",
           delay,
           stagger: stagger || 0,

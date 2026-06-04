@@ -7,6 +7,9 @@ export default function Cursor() {
   const followerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Touch / stylus devices have no mouse cursor — bail out
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const dot = dotRef.current;
     const follower = followerRef.current;
     if (!dot || !follower) return;

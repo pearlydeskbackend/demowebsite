@@ -43,6 +43,10 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth iframe { pointer-events: none; }
 
 /* Custom cursor */
+@media (pointer: coarse) {
+  .cursor, .cursor-follower { display: none !important; }
+}
+
 .cursor {
   position: fixed;
   width: 10px; height: 10px;

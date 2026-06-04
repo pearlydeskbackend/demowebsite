@@ -97,21 +97,28 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating video card */}
+      {/* Floating video card — autoplays muted on desktop */}
       <div
         ref={videoCard}
         role="button"
         tabIndex={0}
-        aria-label="Watch clinic video"
+        aria-label="Watch clinic video with sound"
         onClick={() => setModalOpen(true)}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setModalOpen(true); }}
         className="hidden md:block"
         style={{ position: "absolute", top: "50%", left: "48%", transform: "translate(-50%, -50%)", width: "clamp(260px, 28vw, 400px)", aspectRatio: "16 / 9", zIndex: 10, borderRadius: "14px", overflow: "hidden", cursor: "pointer", boxShadow: "0 24px 60px rgba(0,0,0,0.60), 0 4px 18px rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.12)" }}
       >
-        <Image src="/assets/our-office-img-9-952x667.jpg" alt="Inside Kingsgate Dental — click to play video" fill sizes="clamp(260px, 28vw, 400px)" style={{ objectFit: "cover", objectPosition: "center center" }} />
-        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.32)" }} />
+        {/* Autoplaying muted preview — pointer-events none so clicks reach the card */}
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${YT_ID}?autoplay=1&mute=1&loop=1&playlist=${YT_ID}&controls=0&rel=0&modestbranding=1&playsinline=1`}
+          title="Kingsgate Dental clinic preview"
+          allow="autoplay; encrypted-media"
+          style={{ position: "absolute", top: "50%", left: "50%", width: "120%", height: "120%", transform: "translate(-50%, -50%)", border: "none", pointerEvents: "none" }}
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.22)" }} />
+        {/* Click to watch with sound */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="play-btn" style={{ width: "52px", height: "52px", borderRadius: "50%", background: "rgba(255,255,255,0.20)", border: "2px solid rgba(255,255,255,0.65)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="play-btn" style={{ width: "52px", height: "52px", borderRadius: "50%", background: "rgba(255,255,255,0.18)", border: "2px solid rgba(255,255,255,0.60)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true"><path d="M1.5 1.5 L15 10 L1.5 18.5 Z" fill="white" /></svg>
           </div>
         </div>

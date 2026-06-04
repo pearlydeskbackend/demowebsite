@@ -67,8 +67,8 @@ export default function Team() {
         </AnimatedHeading>
 
         <div className="grid grid-cols-1 items-center" style={{ gap: "clamp(1.25rem,2.5vw,2rem)", paddingBottom: "clamp(1.75rem,3.5vw,2.5rem)", gridTemplateColumns: "1fr" }}>
-          <div className="grid grid-cols-1 md:grid-cols-[0.82fr_1fr] items-center" style={{ gap: "clamp(1.25rem,2.5vw,2rem)" }}>
-            <Reveal className="relative overflow-hidden" style={{ aspectRatio: "5/4", border: "1px solid var(--dl-grid)", background: "var(--dl-surface)" }}>
+          <div className="grid grid-cols-1 md:grid-cols-[0.45fr_1fr] items-center" style={{ gap: "clamp(1.25rem,2.5vw,2rem)" }}>
+            <Reveal className="relative overflow-hidden" style={{ aspectRatio: "4/3", border: "1px solid var(--dl-grid)", background: "var(--dl-surface)" }}>
               <Image src={SMILE_IMG} alt="A confident, healthy smile" fill sizes="40vw" style={{ objectFit: "cover", filter: "brightness(0.88) saturate(0.88)" }} />
               <div className="absolute" style={{ left: "1.25rem", bottom: "1.25rem", padding: "0.5rem 0.75rem", border: "1px solid var(--dl-grid)", background: "rgba(13,25,20,0.82)", backdropFilter: "blur(8px)" }}>
                 <span className="text-label">{t("cosmeticTag")}</span>

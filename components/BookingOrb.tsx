@@ -30,8 +30,9 @@ const nextId = () => `m${++_id}`;
 const ORB_CSS = `
   .bo-root {
     position: fixed; right: 24px; bottom: max(24px, calc(env(safe-area-inset-bottom, 0px) + 16px)); z-index: 9999;
-    display: flex;
-    /* Panel and bubble float above via position:absolute — root stays orb-sized only */
+    /* Explicit orb-sized box — no flex container bounding rectangle */
+    width: var(--bo-size); height: var(--bo-size);
+    background: transparent;
     font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
@@ -48,6 +49,8 @@ const ORB_CSS = `
     );
     overflow: hidden;
     isolation: isolate;
+    /* Hard circle clip — ensures GPU-composited children never bleed outside the circle */
+    clip-path: circle(50% at 50% 50%);
     box-shadow:
       0 22px 52px -12px rgba(90,110,150,0.40),
       0 8px 20px -8px rgba(90,100,140,0.22),

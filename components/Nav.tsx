@@ -82,10 +82,10 @@ export default function Nav() {
               className="inline-flex items-baseline gap-2 justify-self-start"
               aria-label="Kingsgate Dental — home"
             >
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500, fontSize: "2.5rem", letterSpacing: "-0.02em", color: "var(--dl-white)" }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500, fontSize: "clamp(1.5rem, 4vw, 2.5rem)", letterSpacing: "-0.02em", color: "var(--dl-white)" }}>
                 Kingsgate
               </span>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400, fontStyle: "italic", fontSize: "2.5rem", letterSpacing: "-0.02em", color: "var(--dl-sage)" }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400, fontStyle: "italic", fontSize: "clamp(1.5rem, 4vw, 2.5rem)", letterSpacing: "-0.02em", color: "var(--dl-sage)" }}>
                 Dental
               </span>
             </button>

@@ -44,16 +44,21 @@ export default function Hero() {
       className="relative overflow-hidden"
       style={{ height: "100dvh", minHeight: "600px", background: "var(--dl-base)" }}
     >
-      <div className="absolute top-0 right-0 bottom-0" style={{ width: "52%", zIndex: 0 }}>
+      {/* Photo — full-bleed on mobile, right-half on desktop */}
+      <div className="absolute top-0 right-0 bottom-0 w-full md:w-[52%]" style={{ zIndex: 0 }}>
         <Image src="/assets/family-photo.jpg" alt="Mountain landscape" fill priority quality={100} sizes="(max-width: 768px) 100vw, 52vw" style={{ objectFit: "cover", objectPosition: "center 35%" }} />
         <div className="absolute bottom-0 left-0 right-0" style={{ height: "30%", background: "linear-gradient(to top, var(--dl-base), transparent)" }} />
       </div>
 
-      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 1, background: "linear-gradient(to right, var(--dl-base) 0%, var(--dl-base) 32%, rgba(13,25,20,0.72) 48%, rgba(13,25,20,0.10) 66%, transparent 80%)" }} />
+      {/* Desktop gradient — left-to-right */}
+      <div className="absolute inset-0 pointer-events-none hidden md:block" style={{ zIndex: 1, background: "linear-gradient(to right, var(--dl-base) 0%, var(--dl-base) 32%, rgba(13,25,20,0.72) 48%, rgba(13,25,20,0.10) 66%, transparent 80%)" }} />
+      {/* Mobile gradient — bottom-up so image shows at top, text readable at bottom */}
+      <div className="absolute inset-0 pointer-events-none md:hidden" style={{ zIndex: 1, background: "linear-gradient(to top, var(--dl-base) 0%, var(--dl-base) 28%, rgba(13,25,20,0.92) 55%, rgba(13,25,20,0.45) 78%, rgba(13,25,20,0.15) 100%)" }} />
 
+      {/* Text column — full-width on mobile (content sits at bottom), half on desktop */}
       <div
-        className="absolute top-0 left-0 bottom-0 flex flex-col justify-center px-[clamp(1.5rem,5vw,6rem)]"
-        style={{ width: "50%", zIndex: 2, paddingTop: "5.5rem", paddingBottom: "2.5rem" }}
+        className="absolute top-0 left-0 bottom-0 flex flex-col justify-end md:justify-center px-[clamp(1.5rem,5vw,6rem)] w-full md:w-[50%]"
+        style={{ zIndex: 2, paddingTop: "5.5rem", paddingBottom: "clamp(4rem,8vh,2.5rem)" }}
       >
         <div style={{ maxWidth: 480 }}>
           <div data-hero-fade className="flex items-center gap-3 mb-5">
@@ -66,7 +71,7 @@ export default function Hero() {
             as="h1"
             immediate
             delay={0.2}
-            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.5rem,4.5vw,5.5rem)", lineHeight: 1.0, letterSpacing: "-0.03em", fontWeight: 500, color: "var(--dl-white)", marginBottom: "1rem" }}
+            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(2.5rem,4.5vw,5.5rem)", lineHeight: 1.04, letterSpacing: "-0.03em", fontWeight: 500, color: "var(--dl-white)", marginBottom: "1rem" }}
           >
             {t("line1")}
             <br />
@@ -92,6 +97,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Video card — desktop only */}
       <div
         ref={videoCard}
         role="button"
@@ -99,9 +105,10 @@ export default function Hero() {
         aria-label="Watch clinic video"
         onClick={() => setModalOpen(true)}
         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setModalOpen(true); }}
-        style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "clamp(220px, 22vw, 320px)", aspectRatio: "16 / 9", zIndex: 10, borderRadius: "14px", overflow: "hidden", cursor: "pointer", boxShadow: "0 24px 60px rgba(0,0,0,0.60), 0 4px 18px rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.12)" }}
+        className="hidden md:block"
+        style={{ position: "absolute", top: "50%", left: "48%", transform: "translate(-50%, -50%)", width: "clamp(260px, 28vw, 400px)", aspectRatio: "16 / 9", zIndex: 10, borderRadius: "14px", overflow: "hidden", cursor: "pointer", boxShadow: "0 24px 60px rgba(0,0,0,0.60), 0 4px 18px rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.12)" }}
       >
-        <Image src="/assets/our-office-img-2-952x667.jpg" alt="Inside Kingsgate Dental — click to play video" fill sizes="(max-width: 768px) 260px, 320px" style={{ objectFit: "cover", objectPosition: "center center" }} />
+        <Image src="/assets/our-office-img-9-952x667.jpg" alt="Inside Kingsgate Dental — click to play video" fill sizes="(min-width: 768px) clamp(260px, 28vw, 400px)" style={{ objectFit: "cover", objectPosition: "center center" }} />
         <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.32)" }} />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="play-btn" style={{ width: "52px", height: "52px", borderRadius: "50%", background: "rgba(255,255,255,0.20)", border: "2px solid rgba(255,255,255,0.65)", backdropFilter: "blur(6px)", WebkitBackdropFilter: "blur(6px)", display: "flex", alignItems: "center", justifyContent: "center" }}>

@@ -10,6 +10,8 @@ export interface BookingOrbProps {
   accent?: string;
   /** Orb diameter in px. Default 120. */
   size?: number;
+  /** Orb diameter on mobile (≤768px). Falls back to size if not set. */
+  mobileSize?: number;
   /** Show the "Powered by Connomi" tag. Default true. */
   showBranding?: boolean;
   /** Connomi link. */
@@ -428,12 +430,14 @@ export default function BookingOrb({
   welcomeMessage,
   accent = "#7FB7C4",
   size = 120,
+  mobileSize,
   showBranding = true,
   connomiUrl = "https://connomi.com",
   className = "",
 }: BookingOrbProps) {
   const greeting = welcomeMessage ?? `Hi! Welcome to ${clinicName} \u{1F44B}`;
 
+  const [activeSize, setActiveSize] = useState(size);
   const [open, setOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
   const [pressed, setPressed] = useState(false);
@@ -450,6 +454,15 @@ export default function BookingOrb({
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }, []);
+
+  useEffect(() => {
+    if (!mobileSize) return;
+    const mq = window.matchMedia("(max-width: 768px)");
+    const update = (e: MediaQueryListEvent | MediaQueryList) => setActiveSize(e.matches ? mobileSize : size);
+    update(mq);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, [size, mobileSize]);
 
   // Pop the welcome bubble shortly after load (only before panel is opened)
   useEffect(() => {
@@ -497,7 +510,7 @@ export default function BookingOrb({
   return (
     <div
       className={`bo-root ${className}`}
-      style={{ "--bo-accent": accent, "--bo-size": `${size}px` } as React.CSSProperties}
+      style={{ "--bo-accent": accent, "--bo-size": `${activeSize}px` } as React.CSSProperties}
     >
       {/* Inject styles once — React 19 hoists & deduplicates by href */}
       <style href="booking-orb" precedence="default">

@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
-import { X, Play } from "lucide-react";
+import { X } from "lucide-react";
 import AnimatedHeading from "@/components/anim/AnimatedHeading";
 import MagneticButton from "@/components/anim/MagneticButton";
 import { useBooking } from "@/lib/BookingContext";
@@ -213,26 +213,6 @@ export default function Hero() {
                 pointerEvents: "none",
               }}
             />
-            {/* Sound-on indicator — tap to open modal with audio */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="play-btn"
-                style={{
-                  width: 58,
-                  height: 58,
-                  borderRadius: "50%",
-                  background: "rgba(255,255,255,0.16)",
-                  backdropFilter: "blur(10px)",
-                  WebkitBackdropFilter: "blur(10px)",
-                  border: "2px solid rgba(230,240,220,0.65)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Play size={20} fill="white" color="white" style={{ marginLeft: 3 }} />
-              </div>
-            </div>
           </div>
 
           {/* 4. Subhead — one step brighter than --dl-sage for WCAG AA clearance */}

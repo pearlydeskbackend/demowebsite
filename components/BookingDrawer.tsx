@@ -143,7 +143,7 @@ export default function BookingDrawer({ showBranding = true }: Props) {
         style={{ position: "fixed", top: 0, right: 0, bottom: 0, zIndex: 100, width: "min(100vw, 460px)", background: "#E6F0DC", borderLeft: "1px solid rgba(13,25,20,0.12)", display: "flex", flexDirection: "column", transform: isOpen ? "translateX(0)" : "translateX(100%)", transition: "transform 300ms cubic-bezier(0.16,1,0.3,1)", overflowY: "auto",
           // Override CSS variables for light-mint theme
           "--dl-deep": "#E6F0DC", "--dl-base": "#c8e8c0", "--dl-surface": "rgba(255,255,255,0.45)",
-          "--dl-white": "#0D1914", "--dl-sage": "rgba(13,25,20,0.56)", "--dl-mint": "#2A6E45",
+          "--dl-white": "#0D1914", "--dl-sage": "rgba(13,25,20,0.56)", "--dl-mint": "#5BAF82",
           "--dl-grid": "rgba(13,25,20,0.10)", "--dl-grid-hover": "rgba(13,25,20,0.20)",
         } as React.CSSProperties}
       >
